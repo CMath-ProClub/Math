@@ -55,10 +55,11 @@
       { "file": "pages/competitions.html", "title": "Competitions", "type": "catalog" },
       { "file": "pages/summer-programs.html", "title": "Summer Programs", "type": "catalog" },
       { "file": "pages/results.html", "title": "Results & News", "type": "informational" },
-      { "file": "pages/register.html", "title": "Register", "type": "conversion" }
+      { "file": "pages/register.html", "title": "Register", "type": "conversion" },
+      { "file": "pages/shop.html", "title": "Shop", "type": "catalog" }
     ],
     "externalLinks": {
-      "shop": "https://www.e-junkie.com/ecom/gb.php?c=cart&cl=34277&ejc=2",
+      "shopCart": "https://www.e-junkie.com/ecom/gb.php?c=cart&cl=34277&ejc=2",
       "summerRegistration": "https://summer.mathleague.com/user/register/register",
       "campInfo": "http://camp.mathleague.com/summertournament/lectures/professors/table-of-content.php"
     },

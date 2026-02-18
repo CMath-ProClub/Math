@@ -48,7 +48,9 @@ sites/mathleague-redesign/
 
 ## External Services
 
-- **Shop / Online Store** → `https://www.e-junkie.com/ecom/gb.php?c=cart&cl=34277&ejc=2`
+- **Shop / Online Store** → `pages/shop.html` (local product catalog page)
+  - Individual "Add to Cart" buttons link to e-junkie per-product URLs
+  - "View Cart" links to `https://www.e-junkie.com/ecom/gb.php?c=cart&cl=34277&ejc=2`
   - Linked in: utility bar, desktop nav ("Shop"), mobile menu, footer Resources
 
 ## Multi-Site Scalability
