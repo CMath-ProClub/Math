@@ -1,0 +1,103 @@
+{
+  "slug": "mathleague-redesign",
+  "name": "Math League — Full Redesign",
+  "version": "1.0.0",
+  "sourceUrl": "https://mathleague.com",
+  "status": "complete",
+  "created": "2026-02-18",
+  "updated": "2026-02-18",
+
+  "tags": ["American", "International", "Competition", "Store", "High-Traffic", "Big"],
+
+  "complexity": "moderate",
+  "complexityNotes": "7-page static site with registration pathways, competition catalog with anchor navigation, pricing tables, FAQ accordions, and external e-commerce integration (e-junkie). Mobile-first responsive with WCAG AA accessibility. No auth, no CMS, no database.",
+
+  "organization": {
+    "name": "Mathematics Leagues, Inc.",
+    "type": "for-profit",
+    "founded": 1977,
+    "founders": ["Steven R. Conrad", "Daniel Flegler"],
+    "website": "https://mathleague.com",
+    "contact": "comments@mathleague.com",
+    "headquarters": "New Jersey, USA",
+    "isNonprofit": false,
+    "nonprofitNotes": "Not found in ProPublica's 501(c)(3) database. Entity is 'Mathematics Leagues, Inc.' — charges for contests, sells books, and runs paid summer programs. No donation page or tax-exempt language on site."
+  },
+
+  "audience": {
+    "reach": "1,000,000+ students annually",
+    "reachNotes": "Per mathleague.com: 'Over one million students from the United States and Canada participate in Math League Contests each year.' This makes it the largest math competition in North America by participation (compare AMC ~300K, MATHCOUNTS ~100K).",
+    "primaryRegions": ["United States", "Canada"],
+    "internationalPresence": ["China", "Japan", "South Korea", "Australia"],
+    "internationalNotes": "Summer tournament draws ~250 students from 6+ countries. Online Summer Challenge is open worldwide. Separate Asia registration via INFO@LTHOUGHTS.COM.",
+    "gradeLevels": ["4", "5", "6", "7", "8", "Algebra 1", "9-12"],
+    "audienceTypes": ["schools", "teachers", "students", "parents"]
+  },
+
+  "trafficAssessment": {
+    "level": "High-Traffic",
+    "participationBasis": "1,000,000+ annual student participants across US and Canada",
+    "webIndicators": [
+      "Monthly contest result postings drive recurring traffic (6 HS contests/year + grade school results)",
+      "Monthly newsletter publications",
+      "14+ pages of news archives",
+      "Active registration portal for schools",
+      "Multiple subdomains: summer.mathleague.com, camp.mathleague.com",
+      "E-commerce bookstore (e-junkie integration)"
+    ],
+    "competitiveContext": "Largest K-12 math competition in North America. Significantly larger than AMC (~300K students), MATHCOUNTS (~100K), and Math Olympiad for Elementary (~170K)."
+  },
+
+  "scope": {
+    "pages": [
+      { "file": "index.html", "title": "Homepage", "type": "landing" },
+      { "file": "pages/about.html", "title": "About", "type": "informational" },
+      { "file": "pages/competitions.html", "title": "Competitions", "type": "catalog" },
+      { "file": "pages/summer-programs.html", "title": "Summer Programs", "type": "catalog" },
+      { "file": "pages/results.html", "title": "Results & News", "type": "informational" },
+      { "file": "pages/register.html", "title": "Register", "type": "conversion" }
+    ],
+    "externalLinks": {
+      "shop": "https://www.e-junkie.com/ecom/gb.php?c=cart&cl=34277&ejc=2",
+      "summerRegistration": "https://summer.mathleague.com/user/register/register",
+      "campInfo": "http://camp.mathleague.com/summertournament/lectures/professors/table-of-content.php"
+    },
+    "siteFeatures": [
+      "mobile-first-responsive",
+      "wcag-aa-accessibility",
+      "skip-navigation",
+      "aria-labels",
+      "semantic-html5",
+      "tailwind-css-cdn",
+      "external-ecommerce",
+      "faq-accordions",
+      "sticky-sub-navigation",
+      "pricing-tables",
+      "registration-pathways"
+    ]
+  },
+
+  "tech": {
+    "stack": ["HTML5", "Tailwind CSS (CDN)", "Vanilla JavaScript"],
+    "fonts": ["Inter (400-800)"],
+    "buildRequired": false,
+    "hosting": "static"
+  },
+
+  "portfolio": {
+    "visible": true,
+    "featured": true,
+    "thumbnail": "assets/images/og-preview.png",
+    "shortDescription": "Complete 7-page redesign for the largest K-12 math competition in North America (1M+ annual participants).",
+    "longDescription": "Full redesign of mathleague.com featuring mobile-first layout, WCAG AA accessibility, three registration pathways, competition catalog with sticky navigation, pricing tables, FAQ system, and e-commerce integration. Built with Tailwind CSS and vanilla JS — no build step required.",
+    "highlights": [
+      "7 production-ready pages",
+      "1M+ student audience",
+      "3 registration pathways",
+      "E-commerce integration (e-junkie)",
+      "WCAG AA accessible",
+      "Mobile-first responsive",
+      "Zero-dependency static site"
+    ]
+  }
+}

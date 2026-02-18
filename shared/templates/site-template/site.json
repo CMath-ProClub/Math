@@ -1,0 +1,67 @@
+{
+  "slug": "{{SITE_SLUG}}",
+  "name": "{{SITE_NAME}}",
+  "version": "1.0.0",
+  "sourceUrl": "",
+  "status": "in-progress",
+  "created": "{{DATE}}",
+  "updated": "{{DATE}}",
+
+  "tags": [],
+
+  "complexity": "",
+  "complexityNotes": "",
+
+  "organization": {
+    "name": "",
+    "type": "",
+    "founded": null,
+    "founders": [],
+    "website": "",
+    "contact": "",
+    "headquarters": "",
+    "isNonprofit": false,
+    "nonprofitNotes": ""
+  },
+
+  "audience": {
+    "reach": "",
+    "reachNotes": "",
+    "primaryRegions": [],
+    "internationalPresence": [],
+    "internationalNotes": "",
+    "gradeLevels": [],
+    "audienceTypes": []
+  },
+
+  "trafficAssessment": {
+    "level": "",
+    "participationBasis": "",
+    "webIndicators": [],
+    "competitiveContext": ""
+  },
+
+  "scope": {
+    "pages": [
+      { "file": "index.html", "title": "Homepage", "type": "landing" }
+    ],
+    "externalLinks": {},
+    "siteFeatures": []
+  },
+
+  "tech": {
+    "stack": ["HTML5", "Tailwind CSS (CDN)", "Vanilla JavaScript"],
+    "fonts": ["Inter (400-800)"],
+    "buildRequired": false,
+    "hosting": "static"
+  },
+
+  "portfolio": {
+    "visible": false,
+    "featured": false,
+    "thumbnail": "assets/images/og-preview.png",
+    "shortDescription": "",
+    "longDescription": "",
+    "highlights": []
+  }
+}

@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Math League — Inspiring mathematical excellence since 1977. Over one million students across North America participate in our competitions each year.">
+  <title>The Math League — Mathematics Competitions for Students</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="font-sans text-slate-700 bg-white antialiased">
+
+  <!-- Skip to Content -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-gold-500 focus:text-navy-900 focus:px-4 focus:py-2 focus:rounded-md focus:font-semibold">
+    Skip to main content
+  </a>
+
+  <!-- ========== HEADER / NAVIGATION ========== -->
+  <header class="bg-navy-900 sticky top-0 z-40 shadow-lg">
+    <!-- Top Bar -->
+    <div class="hidden lg:block bg-navy-800 border-b border-navy-700">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-9 text-xs text-slate-300">
+        <span>Inspiring mathematical excellence since 1977</span>
+        <div class="flex items-center gap-4">
+          <a href="pages/results.html" class="hover:text-gold-400 transition-colors">Latest Results</a>
+          <span class="text-navy-600">|</span>
+          <a href="https://www.e-junkie.com/ecom/gb.php?c=cart&cl=34277&ejc=2" class="hover:text-gold-400 transition-colors" target="_blank" rel="noopener">Online Store</a>
+          <span class="text-navy-600">|</span>
+          <a href="mailto:comments@mathleague.com" class="hover:text-gold-400 transition-colors">Contact Us</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Nav -->
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Primary navigation">
+      <div class="flex justify-between items-center h-16 lg:h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group" aria-label="The Math League — Home">
+          <div class="w-10 h-10 lg:w-12 lg:h-12 bg-gold-500 rounded-lg flex items-center justify-center shadow-md group-hover:bg-gold-400 transition-colors">
+            <svg class="w-6 h-6 lg:w-7 lg:h-7 text-navy-900" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.745 3A23.933 23.933 0 0 0 3 12c0 3.183.62 6.22 1.745 9M19.255 3C20.38 5.78 21 8.817 21 12s-.62 6.22-1.745 9m-13.51-9h12.51m-6.255-9v18"/>
+            </svg>
+          </div>
+          <div>
+            <span class="text-white font-extrabold text-lg lg:text-xl tracking-tight">The Math League</span>
+            <span class="hidden sm:block text-slate-400 text-xs font-medium -mt-0.5">Mathematics Competitions</span>
+          </div>
+        </a>
+
+        <!-- Desktop Links -->
+        <div class="hidden lg:flex items-center gap-1">
+          <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-gold-400 bg-navy-800" aria-current="page">Home</a>
+          <a href="pages/about.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors">About</a>
+          <a href="pages/competitions.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors">Competitions</a>
+          <a href="pages/summer-programs.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors">Summer Programs</a>
+          <a href="pages/results.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors">Results &amp; News</a>
+          <a href="https://www.e-junkie.com/ecom/gb.php?c=cart&cl=34277&ejc=2" class="px-3 py-2 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors" target="_blank" rel="noopener">Shop</a>
+          <a href="pages/register.html" class="ml-3 inline-flex items-center px-5 py-2.5 bg-gold-500 hover:bg-gold-400 text-navy-900 font-semibold text-sm rounded-lg shadow-md hover:shadow-lg transition-all">
+            Register Now
+            <svg class="ml-1.5 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-slate-300 hover:text-white hover:bg-navy-800 transition-colors" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
+          <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+          <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden lg:hidden pb-4 border-t border-navy-700" role="menu">
+        <div class="pt-3 space-y-1">
+          <a href="index.html" class="block px-3 py-2.5 rounded-md text-sm font-medium text-gold-400 bg-navy-800" role="menuitem" aria-current="page">Home</a>
+          <a href="pages/about.html" class="block px-3 py-2.5 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors" role="menuitem">About</a>
+          <a href="pages/competitions.html" class="block px-3 py-2.5 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors" role="menuitem">Competitions</a>
+          <a href="pages/summer-programs.html" class="block px-3 py-2.5 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors" role="menuitem">Summer Programs</a>
+          <a href="pages/results.html" class="block px-3 py-2.5 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors" role="menuitem">Results &amp; News</a>
+          <a href="https://www.e-junkie.com/ecom/gb.php?c=cart&cl=34277&ejc=2" class="block px-3 py-2.5 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors" role="menuitem" target="_blank" rel="noopener">Shop</a>
+        </div>
+        <div class="mt-4 px-3">
+          <a href="pages/register.html" class="block w-full text-center px-5 py-3 bg-gold-500 hover:bg-gold-400 text-navy-900 font-semibold text-sm rounded-lg shadow-md transition-all" role="menuitem">Register Now →</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main id="main-content">
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="relative bg-gradient-to-br from-navy-900 via-navy-800 to-navy-700 overflow-hidden" aria-labelledby="hero-heading">
+      <!-- Decorative background -->
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-20 left-10 w-72 h-72 bg-gold-500 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-blue-500 rounded-full blur-3xl"></div>
+      </div>
+      <!-- Subtle grid pattern -->
+      <div class="absolute inset-0 opacity-5" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.4&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-navy-600/50 border border-navy-500/50 rounded-full text-gold-400 text-xs sm:text-sm font-medium mb-6">
+            <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+            2025–2026 Contest Season Now Active
+          </div>
+          <h1 id="hero-heading" class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight">
+            Where young minds discover the
+            <span class="text-gold-400">joy of mathematics</span>
+          </h1>
+          <p class="mt-6 text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl">
+            Since 1977, The Math League has inspired over one million students across North America through engaging mathematics competitions for grades 4–12.
+          </p>
+          <div class="mt-10 flex flex-col sm:flex-row gap-4">
+            <a href="pages/register.html" class="inline-flex items-center justify-center px-8 py-4 bg-gold-500 hover:bg-gold-400 text-navy-900 font-bold text-base rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all">
+              Register Your School
+              <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+            </a>
+            <a href="pages/competitions.html" class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-slate-400 hover:border-white text-white font-semibold text-base rounded-xl hover:bg-white/5 transition-all">
+              Explore Competitions
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== IMPACT STATS ===== -->
+    <section class="relative -mt-8 z-10 mb-8" aria-label="Math League impact statistics">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-6 sm:p-8">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            <div class="text-center">
+              <div class="inline-flex items-center justify-center w-12 h-12 bg-gold-500/10 rounded-xl mb-3">
+                <svg class="w-6 h-6 text-gold-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"/></svg>
+              </div>
+              <p class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-900">1M+</p>
+              <p class="text-sm text-slate-500 mt-1 font-medium">Students Annually</p>
+            </div>
+            <div class="text-center">
+              <div class="inline-flex items-center justify-center w-12 h-12 bg-gold-500/10 rounded-xl mb-3">
+                <svg class="w-6 h-6 text-gold-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+              </div>
+              <p class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-900">48+</p>
+              <p class="text-sm text-slate-500 mt-1 font-medium">Years of Excellence</p>
+            </div>
+            <div class="text-center">
+              <div class="inline-flex items-center justify-center w-12 h-12 bg-gold-500/10 rounded-xl mb-3">
+                <svg class="w-6 h-6 text-gold-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5a17.92 17.92 0 0 1-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418"/></svg>
+              </div>
+              <p class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-900">6+</p>
+              <p class="text-sm text-slate-500 mt-1 font-medium">Countries Represented</p>
+            </div>
+            <div class="text-center">
+              <div class="inline-flex items-center justify-center w-12 h-12 bg-gold-500/10 rounded-xl mb-3">
+                <svg class="w-6 h-6 text-gold-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a23.838 23.838 0 0 0-1.012 5.434c3.124.517 6.166 1.306 9.094 2.348a51.816 51.816 0 0 1 9.094-2.348 23.834 23.834 0 0 0-1.012-5.434m-15.482 0A23.74 23.74 0 0 1 12 3c3.26 0 6.36.653 9.187 1.835l.153.312M4.26 10.147l.153-.312M12 3v1.5M7.5 7.5h9"/></svg>
+              </div>
+              <p class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-navy-900">Grades 4–12</p>
+              <p class="text-sm text-slate-500 mt-1 font-medium">All Skill Levels</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROGRAMS OVERVIEW ===== -->
+    <section class="py-16 lg:py-24 bg-white" aria-labelledby="programs-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
+          <p class="text-gold-500 font-semibold text-sm tracking-wide uppercase mb-3">Our Programs</p>
+          <h2 id="programs-heading" class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">
+            Competition pathways for every level
+          </h2>
+          <p class="mt-4 text-lg text-slate-600 leading-relaxed">
+            From elementary school through high school, The Math League offers structured competitions that challenge and inspire students at every stage.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <!-- Card: Elementary -->
+          <article class="group bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-xl hover:border-gold-400/50 transition-all duration-300">
+            <div class="h-48 bg-gradient-to-br from-emerald-50 to-emerald-100 flex items-center justify-center">
+              <div class="text-center">
+                <div class="w-16 h-16 bg-emerald-500/10 rounded-2xl flex items-center justify-center mx-auto mb-3">
+                  <svg class="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"/></svg>
+                </div>
+                <span class="text-emerald-700 font-bold text-sm">Grades 4 & 5</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-navy-900 group-hover:text-navy-600 transition-colors">Elementary Contests</h3>
+              <p class="mt-2 text-slate-600 text-sm leading-relaxed">
+                A single annual contest designed to spark curiosity and build foundational problem-solving skills in young mathematicians.
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-xs font-medium text-slate-400">$45 per set of 30</span>
+                <a href="pages/competitions.html#elementary" class="text-sm font-semibold text-navy-600 hover:text-gold-500 transition-colors inline-flex items-center gap-1">
+                  Learn more
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card: Middle School -->
+          <article class="group bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-xl hover:border-gold-400/50 transition-all duration-300">
+            <div class="h-48 bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center">
+              <div class="text-center">
+                <div class="w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center mx-auto mb-3">
+                  <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605"/></svg>
+                </div>
+                <span class="text-blue-700 font-bold text-sm">Grades 6, 7 & 8</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-navy-900 group-hover:text-navy-600 transition-colors">Middle School Contests</h3>
+              <p class="mt-2 text-slate-600 text-sm leading-relaxed">
+                Grade-specific annual contests covering diverse mathematical topics to develop analytical thinking and competition readiness.
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-xs font-medium text-slate-400">$45 per set of 30</span>
+                <a href="pages/competitions.html#middle" class="text-sm font-semibold text-navy-600 hover:text-gold-500 transition-colors inline-flex items-center gap-1">
+                  Learn more
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card: High School -->
+          <article class="group bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-xl hover:border-gold-400/50 transition-all duration-300">
+            <div class="h-48 bg-gradient-to-br from-purple-50 to-purple-100 flex items-center justify-center">
+              <div class="text-center">
+                <div class="w-16 h-16 bg-purple-500/10 rounded-2xl flex items-center justify-center mx-auto mb-3">
+                  <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M18.75 4.236c.982.143 1.954.317 2.916.52A6.003 6.003 0 0 1 16.27 9.728M18.75 4.236V4.5c0 2.108-.966 3.99-2.48 5.228m0 0a6.016 6.016 0 0 1-4.27 1.772 6.016 6.016 0 0 1-4.27-1.772"/></svg>
+                </div>
+                <span class="text-purple-700 font-bold text-sm">High School</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-navy-900 group-hover:text-navy-600 transition-colors">High School Contests</h3>
+              <p class="mt-2 text-slate-600 text-sm leading-relaxed">
+                Six challenging contests throughout the year, covering topics from algebra to advanced problem-solving across statewide leagues.
+              </p>
+              <div class="mt-4 flex items-center justify-between">
+                <span class="text-xs font-medium text-slate-400">$100 for 6 contests</span>
+                <a href="pages/competitions.html#highschool" class="text-sm font-semibold text-navy-600 hover:text-gold-500 transition-colors inline-flex items-center gap-1">
+                  Learn more
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Additional Program Cards Row -->
+        <div class="grid sm:grid-cols-2 gap-6 lg:gap-8 mt-6 lg:mt-8">
+          <!-- Card: Algebra -->
+          <article class="group bg-white border border-slate-200 rounded-2xl overflow-hidden hover:shadow-xl hover:border-gold-400/50 transition-all duration-300 flex flex-col sm:flex-row">
+            <div class="sm:w-48 h-32 sm:h-auto bg-gradient-to-br from-amber-50 to-amber-100 flex items-center justify-center flex-shrink-0">
+              <div class="text-center">
+                <div class="w-12 h-12 bg-amber-500/10 rounded-xl flex items-center justify-center mx-auto mb-2">
+                  <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008Zm0 2.25h.008v.008H8.25V13.5Zm0 2.25h.008v.008H8.25v-.008Zm0 2.25h.008v.008H8.25V18Zm2.498-6.75h.007v.008h-.007v-.008Zm0 2.25h.007v.008h-.007V13.5Zm0 2.25h.007v.008h-.007v-.008Zm0 2.25h.007v.008h-.007V18Zm2.504-6.75h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V13.5Zm0 2.25h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V18Zm2.498-6.75h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V13.5ZM8.25 6h7.5v2.25h-7.5V6ZM12 2.25c-1.892 0-3.758.11-5.593.322C5.307 2.7 4.5 3.65 4.5 4.757V19.5a2.25 2.25 0 0 0 2.25 2.25h10.5a2.25 2.25 0 0 0 2.25-2.25V4.757c0-1.108-.806-2.057-1.907-2.185A48.507 48.507 0 0 0 12 2.25Z"/></svg>
+                </div>
+                <span class="text-amber-700 font-bold text-xs">Algebra 1</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-navy-900 group-hover:text-navy-600 transition-colors">Algebra Course 1 Contest</h3>
+              <p class="mt-2 text-slate-600 text-sm leading-relaxed">
+                Designed for students currently enrolled in Algebra 1, regardless of grade level. A focused, single annual contest.
+              </p>
+              <a href="pages/competitions.html#algebra" class="mt-3 text-sm font-semibold text-navy-600 hover:text-gold-500 transition-colors inline-flex items-center gap-1">
+                Learn more
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card: Summer Programs -->
+          <article class="group bg-gradient-to-br from-gold-500/5 to-gold-400/10 border border-gold-400/30 rounded-2xl overflow-hidden hover:shadow-xl hover:border-gold-400/60 transition-all duration-300 flex flex-col sm:flex-row">
+            <div class="sm:w-48 h-32 sm:h-auto bg-gradient-to-br from-gold-400/20 to-gold-500/20 flex items-center justify-center flex-shrink-0">
+              <div class="text-center">
+                <div class="w-12 h-12 bg-gold-500/20 rounded-xl flex items-center justify-center mx-auto mb-2">
+                  <svg class="w-6 h-6 text-gold-500" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"/></svg>
+                </div>
+                <span class="text-gold-500 font-bold text-xs">Summer</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-navy-900 group-hover:text-navy-600 transition-colors">Summer Math Camp &amp; Challenge</h3>
+              <p class="mt-2 text-slate-600 text-sm leading-relaxed">
+                International summer tournament at The College of New Jersey plus an online summer challenge open to all students worldwide.
+              </p>
+              <a href="pages/summer-programs.html" class="mt-3 text-sm font-semibold text-gold-500 hover:text-gold-400 transition-colors inline-flex items-center gap-1">
+                Explore summer programs
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="py-16 lg:py-24 bg-slate-50" aria-labelledby="how-it-works-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
+          <p class="text-gold-500 font-semibold text-sm tracking-wide uppercase mb-3">How It Works</p>
+          <h2 id="how-it-works-heading" class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">
+            Getting started is simple
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+          <div class="text-center">
+            <div class="inline-flex items-center justify-center w-14 h-14 bg-navy-900 text-gold-400 font-extrabold text-lg rounded-2xl mb-5 shadow-md">1</div>
+            <h3 class="text-lg font-bold text-navy-900 mb-2">Register Your School</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Schools register online and select their desired contest levels. Individual students participate through their schools.
+            </p>
+          </div>
+          <div class="text-center">
+            <div class="inline-flex items-center justify-center w-14 h-14 bg-navy-900 text-gold-400 font-extrabold text-lg rounded-2xl mb-5 shadow-md">2</div>
+            <h3 class="text-lg font-bold text-navy-900 mb-2">Compete in Contests</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Students take contests at their schools on scheduled dates. Contests can be administered in-person or online.
+            </p>
+          </div>
+          <div class="text-center">
+            <div class="inline-flex items-center justify-center w-14 h-14 bg-navy-900 text-gold-400 font-extrabold text-lg rounded-2xl mb-5 shadow-md">3</div>
+            <h3 class="text-lg font-bold text-navy-900 mb-2">Track Results</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Results are published online with newsletters. Top performers may qualify for the International Summer Tournament.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LATEST NEWS ===== -->
+    <section class="py-16 lg:py-24 bg-white" aria-labelledby="news-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-12">
+          <div>
+            <p class="text-gold-500 font-semibold text-sm tracking-wide uppercase mb-3">Latest Updates</p>
+            <h2 id="news-heading" class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">
+              News &amp; Results
+            </h2>
+          </div>
+          <a href="pages/results.html" class="mt-4 sm:mt-0 text-sm font-semibold text-navy-600 hover:text-gold-500 transition-colors inline-flex items-center gap-1">
+            View all updates
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg>
+          </a>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <article class="group border border-slate-200 rounded-2xl p-6 hover:shadow-lg hover:border-slate-300 transition-all duration-300">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="inline-flex items-center px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-semibold rounded-full">New Results</span>
+              <time datetime="2026-02-01" class="text-xs text-slate-400 font-medium">Feb 1, 2026</time>
+            </div>
+            <h3 class="text-base font-bold text-navy-900 group-hover:text-navy-600 transition-colors leading-snug">
+              Results for High School Contest #4 February 2026 Posted
+            </h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+              Online results for the High School Contest #4 for 2025–2026 have been posted. Newsletter available.
+            </p>
+            <a href="pages/results.html" class="mt-4 text-sm font-semibold text-navy-600 hover:text-gold-500 transition-colors inline-flex items-center gap-1">
+              View results
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg>
+            </a>
+          </article>
+
+          <article class="group border border-slate-200 rounded-2xl p-6 hover:shadow-lg hover:border-slate-300 transition-all duration-300">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="inline-flex items-center px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-semibold rounded-full">New Results</span>
+              <time datetime="2025-12-28" class="text-xs text-slate-400 font-medium">Dec 28, 2025</time>
+            </div>
+            <h3 class="text-base font-bold text-navy-900 group-hover:text-navy-600 transition-colors leading-snug">
+              Results for High School Contest #3 January 2026 Posted
+            </h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+              Online results for the High School Contest #3 for 2025–2026 are now available with the latest newsletter.
+            </p>
+            <a href="pages/results.html" class="mt-4 text-sm font-semibold text-navy-600 hover:text-gold-500 transition-colors inline-flex items-center gap-1">
+              View results
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg>
+            </a>
+          </article>
+
+          <article class="group border border-slate-200 rounded-2xl p-6 hover:shadow-lg hover:border-slate-300 transition-all duration-300">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="inline-flex items-center px-3 py-1 bg-gold-400/20 text-gold-500 text-xs font-semibold rounded-full">Summer Program</span>
+              <time datetime="2025-05-26" class="text-xs text-slate-400 font-medium">May 26, 2025</time>
+            </div>
+            <h3 class="text-base font-bold text-navy-900 group-hover:text-navy-600 transition-colors leading-snug">
+              2025 Math League International Summer Challenge (Online)
+            </h3>
+            <p class="mt-2 text-sm text-slate-600 leading-relaxed">
+              Seven levels of challenges from Grade 3 through Grades 10–12. Short answer and speed round formats.
+            </p>
+            <a href="pages/summer-programs.html" class="mt-4 text-sm font-semibold text-navy-600 hover:text-gold-500 transition-colors inline-flex items-center gap-1">
+              Learn more
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TRUST / CREDIBILITY ===== -->
+    <section class="py-16 lg:py-24 bg-slate-50" aria-labelledby="trust-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-br from-navy-900 to-navy-800 rounded-3xl p-8 sm:p-12 lg:p-16 text-center relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-gold-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+          <div class="absolute bottom-0 left-0 w-48 h-48 bg-blue-500/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+
+          <div class="relative">
+            <h2 id="trust-heading" class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
+              Founded by Presidential Award recipients
+            </h2>
+            <p class="mt-4 text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+              In 1985, founders Steven R. Conrad and Daniel Flegler were honored by President Ronald Reagan for "Excellence in Mathematics Teaching." Their legacy continues to inspire generations of young mathematicians.
+            </p>
+            <div class="mt-8 flex flex-wrap justify-center gap-4 text-sm text-slate-400">
+              <span class="inline-flex items-center gap-2 px-4 py-2 bg-navy-700/50 rounded-full">
+                <svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                Princeton University speakers
+              </span>
+              <span class="inline-flex items-center gap-2 px-4 py-2 bg-navy-700/50 rounded-full">
+                <svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                Columbia University speakers
+              </span>
+              <span class="inline-flex items-center gap-2 px-4 py-2 bg-navy-700/50 rounded-full">
+                <svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                Rutgers University speakers
+              </span>
+              <span class="inline-flex items-center gap-2 px-4 py-2 bg-navy-700/50 rounded-full">
+                <svg class="w-4 h-4 text-gold-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                Swarthmore College speakers
+              </span>
+            </div>
+            <div class="mt-10">
+              <a href="pages/about.html" class="inline-flex items-center px-6 py-3 bg-gold-500 hover:bg-gold-400 text-navy-900 font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all">
+                Learn Our Story
+                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA BANNER ===== -->
+    <section class="py-16 lg:py-24 bg-white" aria-labelledby="cta-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 id="cta-heading" class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">
+          Ready to bring Math League to your school?
+        </h2>
+        <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+          Join thousands of schools across the United States and Canada. Registration for the 2025–2026 contest season is now open.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+          <a href="pages/register.html" class="inline-flex items-center justify-center px-8 py-4 bg-navy-900 hover:bg-navy-800 text-white font-bold text-base rounded-xl shadow-lg hover:shadow-xl transition-all">
+            Register Your School
+            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+          </a>
+          <a href="pages/competitions.html" class="inline-flex items-center justify-center px-8 py-4 bg-white border-2 border-slate-300 hover:border-navy-600 text-navy-900 font-semibold text-base rounded-xl hover:bg-slate-50 transition-all">
+            View Sample Contests
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-navy-900 text-slate-300" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
+        <!-- Brand -->
+        <div class="col-span-2 md:col-span-1">
+          <a href="index.html" class="inline-flex items-center gap-3 group" aria-label="The Math League — Home">
+            <div class="w-10 h-10 bg-gold-500 rounded-lg flex items-center justify-center shadow-md group-hover:bg-gold-400 transition-colors">
+              <svg class="w-6 h-6 text-navy-900" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.745 3A23.933 23.933 0 0 0 3 12c0 3.183.62 6.22 1.745 9M19.255 3C20.38 5.78 21 8.817 21 12s-.62 6.22-1.745 9m-13.51-9h12.51m-6.255-9v18"/>
+              </svg>
+            </div>
+            <span class="text-white font-extrabold text-lg">The Math League</span>
+          </a>
+          <p class="mt-4 text-sm text-slate-400 leading-relaxed">
+            Inspiring mathematical excellence since 1977. Over one million students participate annually.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-white font-semibold text-sm mb-4">Programs</h3>
+          <ul class="space-y-2.5" role="list">
+            <li><a href="pages/competitions.html" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">Competitions</a></li>
+            <li><a href="pages/summer-programs.html" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">Summer Camp</a></li>
+            <li><a href="pages/summer-programs.html#online-challenge" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">Online Challenge</a></li>
+            <li><a href="pages/results.html" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">Results</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div>
+          <h3 class="text-white font-semibold text-sm mb-4">Resources</h3>
+          <ul class="space-y-2.5" role="list">
+            <li><a href="pages/results.html#newsletters" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">Newsletters</a></li>
+            <li><a href="pages/competitions.html#samples" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">Sample Contests</a></li>
+            <li><a href="pages/competitions.html#bookstore" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">Contest Books</a></li>
+            <li><a href="https://www.e-junkie.com/ecom/gb.php?c=cart&cl=34277&ejc=2" class="text-sm text-slate-400 hover:text-gold-400 transition-colors" target="_blank" rel="noopener">Online Store</a></li>
+            <li><a href="pages/about.html" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">About Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="text-white font-semibold text-sm mb-4">Contact</h3>
+          <ul class="space-y-2.5" role="list">
+            <li class="text-sm text-slate-400">
+              <a href="mailto:comments@mathleague.com" class="hover:text-gold-400 transition-colors">comments@mathleague.com</a>
+            </li>
+            <li><a href="pages/register.html" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">Register a School</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-navy-700 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-xs text-slate-500">&copy; 2026 The Math League. All rights reserved.</p>
+        <p class="text-xs text-slate-500">Founded 1977 by Steven R. Conrad &amp; Daniel Flegler</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about The Math League — founded in 1977 by Presidential Award recipients Steven R. Conrad and Daniel Flegler to inspire mathematical excellence.">
+  <title>About — The Math League</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans text-slate-700 bg-white antialiased">
+
+  <!-- Skip to Content -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-gold-500 focus:text-navy-900 focus:px-4 focus:py-2 focus:rounded-md focus:font-semibold">
+    Skip to main content
+  </a>
+
+  <!-- ========== HEADER ========== -->
+  <header class="bg-navy-900 sticky top-0 z-40 shadow-lg">
+    <div class="hidden lg:block bg-navy-800 border-b border-navy-700">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-9 text-xs text-slate-300">
+        <span>Inspiring mathematical excellence since 1977</span>
+        <div class="flex items-center gap-4">
+          <a href="results.html" class="hover:text-gold-400 transition-colors">Latest Results</a>
+          <span class="text-navy-600">|</span>
+          <a href="https://www.e-junkie.com/ecom/gb.php?c=cart&cl=34277&ejc=2" target="_blank" rel="noopener" class="hover:text-gold-400 transition-colors">Online Store</a>
+          <span class="text-navy-600">|</span>
+          <a href="mailto:comments@mathleague.com" class="hover:text-gold-400 transition-colors">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Primary navigation">
+      <div class="flex justify-between items-center h-16 lg:h-20">
+        <a href="../index.html" class="flex items-center gap-3 group" aria-label="The Math League — Home">
+          <div class="w-10 h-10 lg:w-12 lg:h-12 bg-gold-500 rounded-lg flex items-center justify-center shadow-md group-hover:bg-gold-400 transition-colors">
+            <svg class="w-6 h-6 lg:w-7 lg:h-7 text-navy-900" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.745 3A23.933 23.933 0 0 0 3 12c0 3.183.62 6.22 1.745 9M19.255 3C20.38 5.78 21 8.817 21 12s-.62 6.22-1.745 9m-13.51-9h12.51m-6.255-9v18"/></svg>
+          </div>
+          <div>
+            <span class="text-white font-extrabold text-lg lg:text-xl tracking-tight">The Math League</span>
+            <span class="hidden sm:block text-slate-400 text-xs font-medium -mt-0.5">Mathematics Competitions</span>
+          </div>
+        </a>
+        <div class="hidden lg:flex items-center gap-1">
+          <a href="../index.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors">Home</a>
+          <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium text-gold-400 bg-navy-800" aria-current="page">About</a>
+          <a href="competitions.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors">Competitions</a>
+          <a href="summer-programs.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors">Summer Programs</a>
+          <a href="results.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors">Results &amp; News</a>
+          <a href="https://www.e-junkie.com/ecom/gb.php?c=cart&cl=34277&ejc=2" target="_blank" rel="noopener" class="px-3 py-2 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors">Shop</a>
+          <a href="register.html" class="ml-3 inline-flex items-center px-5 py-2.5 bg-gold-500 hover:bg-gold-400 text-navy-900 font-semibold text-sm rounded-lg shadow-md hover:shadow-lg transition-all">Register Now <svg class="ml-1.5 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></a>
+        </div>
+        <button id="mobile-menu-btn" class="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-slate-300 hover:text-white hover:bg-navy-800 transition-colors" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
+          <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+          <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden lg:hidden pb-4 border-t border-navy-700" role="menu">
+        <div class="pt-3 space-y-1">
+          <a href="../index.html" class="block px-3 py-2.5 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors" role="menuitem">Home</a>
+          <a href="about.html" class="block px-3 py-2.5 rounded-md text-sm font-medium text-gold-400 bg-navy-800" role="menuitem" aria-current="page">About</a>
+          <a href="competitions.html" class="block px-3 py-2.5 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors" role="menuitem">Competitions</a>
+          <a href="summer-programs.html" class="block px-3 py-2.5 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors" role="menuitem">Summer Programs</a>
+          <a href="results.html" class="block px-3 py-2.5 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors" role="menuitem">Results &amp; News</a>
+          <a href="https://www.e-junkie.com/ecom/gb.php?c=cart&cl=34277&ejc=2" target="_blank" rel="noopener" class="block px-3 py-2.5 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors" role="menuitem">Shop</a>
+        </div>
+        <div class="mt-4 px-3"><a href="register.html" class="block w-full text-center px-5 py-3 bg-gold-500 hover:bg-gold-400 text-navy-900 font-semibold text-sm rounded-lg shadow-md transition-all" role="menuitem">Register Now →</a></div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========== MAIN ========== -->
+  <main id="main-content">
+
+    <!-- Page Hero -->
+    <section class="bg-gradient-to-br from-navy-900 via-navy-800 to-navy-700 relative overflow-hidden" aria-labelledby="page-heading">
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-10 right-20 w-72 h-72 bg-gold-500 rounded-full blur-3xl"></div>
+      </div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+        <nav aria-label="Breadcrumb" class="mb-6">
+          <ol class="flex items-center gap-2 text-sm text-slate-400">
+            <li><a href="../index.html" class="hover:text-gold-400 transition-colors">Home</a></li>
+            <li aria-hidden="true"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg></li>
+            <li class="text-gold-400 font-medium" aria-current="page">About</li>
+          </ol>
+        </nav>
+        <h1 id="page-heading" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+          About The Math League
+        </h1>
+        <p class="mt-4 text-lg sm:text-xl text-slate-300 max-w-2xl leading-relaxed">
+          Nearly five decades of inspiring young minds through the joy and challenge of mathematical problem-solving.
+        </p>
+      </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="py-16 lg:py-24 bg-white" aria-labelledby="mission-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div>
+            <p class="text-gold-500 font-semibold text-sm tracking-wide uppercase mb-3">Our Mission</p>
+            <h2 id="mission-heading" class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">
+              Encouraging student interest and confidence in mathematics
+            </h2>
+            <p class="mt-6 text-lg text-slate-600 leading-relaxed">
+              The Math League provides math contests for students in grades 4 through 12, as well as Algebra 1 students. Over one million students from the United States and Canada participate each year.
+            </p>
+            <p class="mt-4 text-slate-600 leading-relaxed">
+              Every contest includes questions from different areas of mathematics. The goal is to encourage student interest and confidence through solving worthwhile problems. Many students first develop their love for mathematics through problem-solving activities like these contests.
+            </p>
+            <p class="mt-4 text-slate-600 leading-relaxed">
+              Schools compete in statewide or multistate league competitions, fostering both individual excellence and team collaboration.
+            </p>
+          </div>
+          <div class="bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-8 lg:p-12">
+            <div class="grid grid-cols-2 gap-6">
+              <div class="bg-white rounded-xl p-6 shadow-sm text-center">
+                <p class="text-3xl font-extrabold text-navy-900">1977</p>
+                <p class="text-sm text-slate-500 mt-1">Year Founded</p>
+              </div>
+              <div class="bg-white rounded-xl p-6 shadow-sm text-center">
+                <p class="text-3xl font-extrabold text-navy-900">1M+</p>
+                <p class="text-sm text-slate-500 mt-1">Annual Students</p>
+              </div>
+              <div class="bg-white rounded-xl p-6 shadow-sm text-center">
+                <p class="text-3xl font-extrabold text-navy-900">18</p>
+                <p class="text-sm text-slate-500 mt-1">Books Authored</p>
+              </div>
+              <div class="bg-white rounded-xl p-6 shadow-sm text-center">
+                <p class="text-3xl font-extrabold text-navy-900">48+</p>
+                <p class="text-sm text-slate-500 mt-1">Years Running</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Founders -->
+    <section class="py-16 lg:py-24 bg-slate-50" aria-labelledby="founders-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
+          <p class="text-gold-500 font-semibold text-sm tracking-wide uppercase mb-3">Our Founders</p>
+          <h2 id="founders-heading" class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">
+            Presidential Award recipients for Excellence in Mathematics Teaching
+          </h2>
+          <p class="mt-4 text-lg text-slate-600 leading-relaxed">
+            In October 1985, both founders were honored by President Ronald Reagan — Mr. Conrad as the winner from New York, and Mr. Flegler as the winner from New Jersey.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+          <!-- Steven R. Conrad -->
+          <article class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+            <div class="h-4 bg-gradient-to-r from-gold-500 to-gold-400"></div>
+            <div class="p-8">
+              <div class="flex items-start gap-4 mb-6">
+                <div class="w-16 h-16 bg-navy-900 rounded-2xl flex items-center justify-center flex-shrink-0">
+                  <span class="text-gold-400 font-extrabold text-xl">SC</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-navy-900">Steven R. Conrad</h3>
+                  <p class="text-gold-500 font-medium text-sm">Co-Founder</p>
+                </div>
+              </div>
+              <div class="space-y-3 text-sm text-slate-600 leading-relaxed">
+                <p>
+                  Mr. Conrad taught at Roslyn High School, Roslyn, New York, from 1980 to 1998, and previously at Benjamin Cardozo High School and Francis Lewis High School in New York.
+                </p>
+                <p>
+                  He received his B.S. from Queens College and M.S. from Yeshiva University, with additional graduate study at the University of San Francisco, Fordham University, and St. John's University.
+                </p>
+                <p>
+                  More than 60 of his students have been named to the honors group of the Intel National Science Talent Search for mathematics papers. Six of them finished in the top 10 nationwide. His sons are both math professors.
+                </p>
+                <p>
+                  He served as Problem Editor for <cite>The Mathematics Student Journal</cite> (NCTM) and contributed to <cite>Mathematics Magazine</cite>, <cite>The Mathematics Teacher</cite>, <cite>American Mathematical Monthly</cite>, and <cite>Crux Mathematicorum</cite>. He also served six years on the committee developing the SAT II for the College Board.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Daniel Flegler -->
+          <article class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+            <div class="h-4 bg-gradient-to-r from-navy-700 to-navy-600"></div>
+            <div class="p-8">
+              <div class="flex items-start gap-4 mb-6">
+                <div class="w-16 h-16 bg-navy-900 rounded-2xl flex items-center justify-center flex-shrink-0">
+                  <span class="text-gold-400 font-extrabold text-xl">DF</span>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-navy-900">Daniel Flegler</h3>
+                  <p class="text-gold-500 font-medium text-sm">Co-Founder</p>
+                </div>
+              </div>
+              <div class="space-y-3 text-sm text-slate-600 leading-relaxed">
+                <p>
+                  Mr. Flegler taught at Waldwick High School, Waldwick, New Jersey, from 1965 to 1991, serving as department chairman for 11 years.
+                </p>
+                <p>
+                  He received his B.A. from Brown University and M.A. from Columbia University, with additional graduate work at Fairleigh Dickinson University, the University of Iowa, and Rutgers University.
+                </p>
+                <p>
+                  In 1977, Mr. Flegler was awarded Princeton University's prestigious award for "Distinguished Secondary School Teaching."
+                </p>
+                <p>
+                  More than 15 of his students were named to the honors group of the Intel National Science Talent Search, with three finishing in the top 40 nationwide. He served on the Executive Committee of the Association of Mathematics Teachers of New Jersey from 1972–78.
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="mt-12 bg-white border border-slate-200 rounded-2xl p-8 text-center">
+          <p class="text-slate-600 leading-relaxed max-w-3xl mx-auto">
+            Together, Mr. Conrad and Mr. Flegler have co-authored <strong class="text-navy-900">18 books</strong> and have been preparing contests for math students across North America since 1977. Their work continues to impact generations of students who discover their passion for mathematics through Math League competitions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Summer Tournament Speakers -->
+    <section class="py-16 lg:py-24 bg-white" aria-labelledby="speakers-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <p class="text-gold-500 font-semibold text-sm tracking-wide uppercase mb-3">Academic Partners</p>
+          <h2 id="speakers-heading" class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">
+            World-class speakers and institutions
+          </h2>
+          <p class="mt-4 text-lg text-slate-600 leading-relaxed">
+            Our International Summer Tournament features speakers from the nation's most prestigious universities.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6">
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 text-center hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-navy-900/5 rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-navy-700" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a23.838 23.838 0 0 0-1.012 5.434c3.124.517 6.166 1.306 9.094 2.348a51.816 51.816 0 0 1 9.094-2.348 23.834 23.834 0 0 0-1.012-5.434m-15.482 0A23.74 23.74 0 0 1 12 3c3.26 0 6.36.653 9.187 1.835l.153.312"/></svg>
+            </div>
+            <p class="font-bold text-navy-900 text-sm">Princeton University</p>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 text-center hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-navy-900/5 rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-navy-700" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a23.838 23.838 0 0 0-1.012 5.434c3.124.517 6.166 1.306 9.094 2.348a51.816 51.816 0 0 1 9.094-2.348 23.834 23.834 0 0 0-1.012-5.434m-15.482 0A23.74 23.74 0 0 1 12 3c3.26 0 6.36.653 9.187 1.835l.153.312"/></svg>
+            </div>
+            <p class="font-bold text-navy-900 text-sm">Columbia University</p>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 text-center hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-navy-900/5 rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-navy-700" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a23.838 23.838 0 0 0-1.012 5.434c3.124.517 6.166 1.306 9.094 2.348a51.816 51.816 0 0 1 9.094-2.348 23.834 23.834 0 0 0-1.012-5.434m-15.482 0A23.74 23.74 0 0 1 12 3c3.26 0 6.36.653 9.187 1.835l.153.312"/></svg>
+            </div>
+            <p class="font-bold text-navy-900 text-sm">Rutgers University</p>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 text-center hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-navy-900/5 rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-navy-700" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a23.838 23.838 0 0 0-1.012 5.434c3.124.517 6.166 1.306 9.094 2.348a51.816 51.816 0 0 1 9.094-2.348 23.834 23.834 0 0 0-1.012-5.434m-15.482 0A23.74 23.74 0 0 1 12 3c3.26 0 6.36.653 9.187 1.835l.153.312"/></svg>
+            </div>
+            <p class="font-bold text-navy-900 text-sm">Swarthmore College</p>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 text-center hover:shadow-md transition-shadow">
+            <div class="w-12 h-12 bg-navy-900/5 rounded-full flex items-center justify-center mx-auto mb-3">
+              <svg class="w-6 h-6 text-navy-700" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a23.838 23.838 0 0 0-1.012 5.434c3.124.517 6.166 1.306 9.094 2.348a51.816 51.816 0 0 1 9.094-2.348 23.834 23.834 0 0 0-1.012-5.434m-15.482 0A23.74 23.74 0 0 1 12 3c3.26 0 6.36.653 9.187 1.835l.153.312"/></svg>
+            </div>
+            <p class="font-bold text-navy-900 text-sm">Williams College</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 lg:py-24 bg-slate-50" aria-labelledby="about-cta-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 id="about-cta-heading" class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">
+          Continue the tradition of excellence
+        </h2>
+        <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+          Join the millions of students who have discovered their love of mathematics through Math League competitions.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+          <a href="register.html" class="inline-flex items-center justify-center px-8 py-4 bg-navy-900 hover:bg-navy-800 text-white font-bold text-base rounded-xl shadow-lg hover:shadow-xl transition-all">
+            Register Your School
+            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
+          </a>
+          <a href="competitions.html" class="inline-flex items-center justify-center px-8 py-4 bg-white border-2 border-slate-300 hover:border-navy-600 text-navy-900 font-semibold text-base rounded-xl hover:bg-slate-50 transition-all">
+            Explore Competitions
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-navy-900 text-slate-300" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
+        <div class="col-span-2 md:col-span-1">
+          <a href="../index.html" class="inline-flex items-center gap-3 group" aria-label="The Math League — Home">
+            <div class="w-10 h-10 bg-gold-500 rounded-lg flex items-center justify-center shadow-md group-hover:bg-gold-400 transition-colors">
+              <svg class="w-6 h-6 text-navy-900" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.745 3A23.933 23.933 0 0 0 3 12c0 3.183.62 6.22 1.745 9M19.255 3C20.38 5.78 21 8.817 21 12s-.62 6.22-1.745 9m-13.51-9h12.51m-6.255-9v18"/></svg>
+            </div>
+            <span class="text-white font-extrabold text-lg">The Math League</span>
+          </a>
+          <p class="mt-4 text-sm text-slate-400 leading-relaxed">Inspiring mathematical excellence since 1977. Over one million students participate annually.</p>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold text-sm mb-4">Programs</h3>
+          <ul class="space-y-2.5" role="list">
+            <li><a href="competitions.html" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">Competitions</a></li>
+            <li><a href="summer-programs.html" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">Summer Camp</a></li>
+            <li><a href="summer-programs.html#online-challenge" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">Online Challenge</a></li>
+            <li><a href="results.html" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">Results</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold text-sm mb-4">Resources</h3>
+          <ul class="space-y-2.5" role="list">
+            <li><a href="results.html#newsletters" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">Newsletters</a></li>
+            <li><a href="competitions.html#samples" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">Sample Contests</a></li>
+            <li><a href="competitions.html#bookstore" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">Contest Books</a></li>
+            <li><a href="https://www.e-junkie.com/ecom/gb.php?c=cart&cl=34277&ejc=2" target="_blank" rel="noopener" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">Online Store</a></li>
+            <li><a href="about.html" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">About Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold text-sm mb-4">Contact</h3>
+          <ul class="space-y-2.5" role="list">
+            <li class="text-sm text-slate-400"><a href="mailto:comments@mathleague.com" class="hover:text-gold-400 transition-colors">comments@mathleague.com</a></li>
+            <li><a href="register.html" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">Register a School</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-navy-700 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-xs text-slate-500">&copy; 2026 The Math League. All rights reserved.</p>
+        <p class="text-xs text-slate-500">Founded 1977 by Steven R. Conrad &amp; Daniel Flegler</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+
+</body>
+</html>

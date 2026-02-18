@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Math League competition information for Grades 4–12, Algebra 1, and High School. View schedules, pricing, and sample contest problems.">
+  <title>Competitions — The Math League</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../assets/js/tailwind.config.js"></script>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans text-slate-700 bg-white antialiased">
+
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-gold-500 focus:text-navy-900 focus:px-4 focus:py-2 focus:rounded-md focus:font-semibold">Skip to main content</a>
+
+  <!-- ========== HEADER ========== -->
+  <header class="bg-navy-900 sticky top-0 z-40 shadow-lg">
+    <div class="hidden lg:block bg-navy-800 border-b border-navy-700">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-9 text-xs text-slate-300">
+        <span>Inspiring mathematical excellence since 1977</span>
+        <div class="flex items-center gap-4">
+          <a href="results.html" class="hover:text-gold-400 transition-colors">Latest Results</a>
+          <span class="text-navy-600">|</span>
+          <a href="https://www.e-junkie.com/ecom/gb.php?c=cart&cl=34277&ejc=2" target="_blank" rel="noopener" class="hover:text-gold-400 transition-colors">Online Store</a>
+          <span class="text-navy-600">|</span>
+          <a href="mailto:comments@mathleague.com" class="hover:text-gold-400 transition-colors">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Primary navigation">
+      <div class="flex justify-between items-center h-16 lg:h-20">
+        <a href="../index.html" class="flex items-center gap-3 group" aria-label="The Math League — Home">
+          <div class="w-10 h-10 lg:w-12 lg:h-12 bg-gold-500 rounded-lg flex items-center justify-center shadow-md group-hover:bg-gold-400 transition-colors">
+            <svg class="w-6 h-6 lg:w-7 lg:h-7 text-navy-900" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.745 3A23.933 23.933 0 0 0 3 12c0 3.183.62 6.22 1.745 9M19.255 3C20.38 5.78 21 8.817 21 12s-.62 6.22-1.745 9m-13.51-9h12.51m-6.255-9v18"/></svg>
+          </div>
+          <div>
+            <span class="text-white font-extrabold text-lg lg:text-xl tracking-tight">The Math League</span>
+            <span class="hidden sm:block text-slate-400 text-xs font-medium -mt-0.5">Mathematics Competitions</span>
+          </div>
+        </a>
+        <div class="hidden lg:flex items-center gap-1">
+          <a href="../index.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors">Home</a>
+          <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors">About</a>
+          <a href="competitions.html" class="px-3 py-2 rounded-md text-sm font-medium text-gold-400 bg-navy-800" aria-current="page">Competitions</a>
+          <a href="summer-programs.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors">Summer Programs</a>
+          <a href="results.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors">Results &amp; News</a>
+          <a href="https://www.e-junkie.com/ecom/gb.php?c=cart&cl=34277&ejc=2" target="_blank" rel="noopener" class="px-3 py-2 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors">Shop</a>
+          <a href="register.html" class="ml-3 inline-flex items-center px-5 py-2.5 bg-gold-500 hover:bg-gold-400 text-navy-900 font-semibold text-sm rounded-lg shadow-md hover:shadow-lg transition-all">Register Now <svg class="ml-1.5 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></a>
+        </div>
+        <button id="mobile-menu-btn" class="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-slate-300 hover:text-white hover:bg-navy-800 transition-colors" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation menu">
+          <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+          <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div id="mobile-menu" class="hidden lg:hidden pb-4 border-t border-navy-700" role="menu">
+        <div class="pt-3 space-y-1">
+          <a href="../index.html" class="block px-3 py-2.5 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors" role="menuitem">Home</a>
+          <a href="about.html" class="block px-3 py-2.5 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors" role="menuitem">About</a>
+          <a href="competitions.html" class="block px-3 py-2.5 rounded-md text-sm font-medium text-gold-400 bg-navy-800" role="menuitem" aria-current="page">Competitions</a>
+          <a href="summer-programs.html" class="block px-3 py-2.5 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors" role="menuitem">Summer Programs</a>
+          <a href="results.html" class="block px-3 py-2.5 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors" role="menuitem">Results &amp; News</a>
+          <a href="https://www.e-junkie.com/ecom/gb.php?c=cart&cl=34277&ejc=2" target="_blank" rel="noopener" class="block px-3 py-2.5 rounded-md text-sm font-medium text-slate-200 hover:text-white hover:bg-navy-800 transition-colors" role="menuitem">Shop</a>
+        </div>
+        <div class="mt-4 px-3"><a href="register.html" class="block w-full text-center px-5 py-3 bg-gold-500 hover:bg-gold-400 text-navy-900 font-semibold text-sm rounded-lg shadow-md transition-all" role="menuitem">Register Now →</a></div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========== MAIN ========== -->
+  <main id="main-content">
+
+    <!-- Page Hero -->
+    <section class="bg-gradient-to-br from-navy-900 via-navy-800 to-navy-700 relative overflow-hidden" aria-labelledby="page-heading">
+      <div class="absolute inset-0 opacity-10"><div class="absolute bottom-10 left-20 w-72 h-72 bg-gold-500 rounded-full blur-3xl"></div></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+        <nav aria-label="Breadcrumb" class="mb-6">
+          <ol class="flex items-center gap-2 text-sm text-slate-400">
+            <li><a href="../index.html" class="hover:text-gold-400 transition-colors">Home</a></li>
+            <li aria-hidden="true"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg></li>
+            <li class="text-gold-400 font-medium" aria-current="page">Competitions</li>
+          </ol>
+        </nav>
+        <h1 id="page-heading" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">Competitions</h1>
+        <p class="mt-4 text-lg sm:text-xl text-slate-300 max-w-2xl leading-relaxed">
+          Math League contests cover a wide range of mathematical topics at every grade level. Schools compete in statewide and multistate league competitions throughout the academic year.
+        </p>
+      </div>
+    </section>
+
+    <!-- Quick Jump Nav -->
+    <section class="bg-white border-b border-slate-200 sticky top-16 lg:top-20 z-30" aria-label="Page sections">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex gap-1 overflow-x-auto py-3 -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-hide">
+          <a href="#elementary" class="flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium bg-slate-100 text-slate-700 hover:bg-navy-900 hover:text-white transition-colors">Grades 4 &amp; 5</a>
+          <a href="#middle" class="flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium bg-slate-100 text-slate-700 hover:bg-navy-900 hover:text-white transition-colors">Grades 6–8</a>
+          <a href="#algebra" class="flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium bg-slate-100 text-slate-700 hover:bg-navy-900 hover:text-white transition-colors">Algebra 1</a>
+          <a href="#highschool" class="flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium bg-slate-100 text-slate-700 hover:bg-navy-900 hover:text-white transition-colors">High School</a>
+          <a href="#schedule" class="flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium bg-slate-100 text-slate-700 hover:bg-navy-900 hover:text-white transition-colors">Schedule</a>
+          <a href="#samples" class="flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium bg-slate-100 text-slate-700 hover:bg-navy-900 hover:text-white transition-colors">Samples</a>
+          <a href="#bookstore" class="flex-shrink-0 px-4 py-2 rounded-full text-sm font-medium bg-slate-100 text-slate-700 hover:bg-navy-900 hover:text-white transition-colors">Bookstore</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Important Note -->
+    <section class="py-8 bg-amber-50 border-b border-amber-200" aria-label="Important notice">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-start gap-3">
+          <svg class="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"/></svg>
+          <div>
+            <p class="text-sm font-semibold text-amber-800">Important Note for Individuals</p>
+            <p class="text-sm text-amber-700 mt-1">Only schools may purchase current-year contests. Individuals can access previous years' problems through our <a href="#bookstore" class="font-semibold underline hover:text-amber-900">contest problem books</a> or subscription packages.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Elementary Contests -->
+    <section id="elementary" class="py-16 lg:py-24 bg-white scroll-mt-32" aria-labelledby="elementary-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-5 gap-12 items-start">
+          <div class="lg:col-span-3">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-emerald-50 text-emerald-700 text-xs font-semibold rounded-full mb-4">
+              <span class="w-2 h-2 bg-emerald-500 rounded-full"></span>
+              Grades 4 &amp; 5
+            </div>
+            <h2 id="elementary-heading" class="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight">Elementary School Contests</h2>
+            <p class="mt-4 text-slate-600 leading-relaxed">
+              Designed to spark curiosity and build foundational problem-solving skills, our 4th and 5th grade contests are single annual events. Each contest covers age-appropriate topics from across mathematics, encouraging young students to think creatively and build confidence.
+            </p>
+            <div class="mt-6 space-y-3">
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                <p class="text-sm text-slate-600"><strong class="text-navy-900">Format:</strong> One annual contest per grade level</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                <p class="text-sm text-slate-600"><strong class="text-navy-900">Registration deadline:</strong> January 31, 2026</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                <p class="text-sm text-slate-600"><strong class="text-navy-900">Materials ship:</strong> March</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                <p class="text-sm text-slate-600"><strong class="text-navy-900">Contest date:</strong> April 15 or later</p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-2">
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+              <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">Pricing</p>
+              <div class="space-y-4">
+                <div class="bg-white rounded-xl p-4 border border-slate-100">
+                  <p class="font-bold text-navy-900">4th Grade Contest</p>
+                  <p class="text-2xl font-extrabold text-navy-900 mt-1">$45 <span class="text-sm font-medium text-slate-400">/ set of 30</span></p>
+                </div>
+                <div class="bg-white rounded-xl p-4 border border-slate-100">
+                  <p class="font-bold text-navy-900">5th Grade Contest</p>
+                  <p class="text-2xl font-extrabold text-navy-900 mt-1">$45 <span class="text-sm font-medium text-slate-400">/ set of 30</span></p>
+                </div>
+              </div>
+              <a href="register.html" class="mt-6 block w-full text-center px-6 py-3 bg-navy-900 hover:bg-navy-800 text-white font-semibold rounded-xl transition-colors">Register School →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Middle School Contests -->
+    <section id="middle" class="py-16 lg:py-24 bg-slate-50 scroll-mt-32" aria-labelledby="middle-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-5 gap-12 items-start">
+          <div class="lg:col-span-3">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 text-blue-700 text-xs font-semibold rounded-full mb-4">
+              <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+              Grades 6, 7 &amp; 8
+            </div>
+            <h2 id="middle-heading" class="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight">Middle School Contests</h2>
+            <p class="mt-4 text-slate-600 leading-relaxed">
+              Each grade level receives its own unique contest, featuring problems from diverse mathematical domains. These contests develop analytical thinking and prepare students for advanced competitions.
+            </p>
+            <div class="mt-6 space-y-3">
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                <p class="text-sm text-slate-600"><strong class="text-navy-900">Format:</strong> One annual contest per grade level (6th, 7th, 8th)</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                <p class="text-sm text-slate-600"><strong class="text-navy-900">Registration deadline:</strong> December 31, 2025</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                <p class="text-sm text-slate-600"><strong class="text-navy-900">Materials ship:</strong> January</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                <p class="text-sm text-slate-600"><strong class="text-navy-900">Contest date:</strong> 3rd or 4th Tuesday in February 2026</p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-2">
+            <div class="bg-white border border-slate-200 rounded-2xl p-6">
+              <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">Pricing</p>
+              <div class="space-y-4">
+                <div class="bg-slate-50 rounded-xl p-4 border border-slate-100">
+                  <p class="font-bold text-navy-900">6th Grade Contest</p>
+                  <p class="text-2xl font-extrabold text-navy-900 mt-1">$45 <span class="text-sm font-medium text-slate-400">/ set of 30</span></p>
+                </div>
+                <div class="bg-slate-50 rounded-xl p-4 border border-slate-100">
+                  <p class="font-bold text-navy-900">7th Grade Contest</p>
+                  <p class="text-2xl font-extrabold text-navy-900 mt-1">$45 <span class="text-sm font-medium text-slate-400">/ set of 30</span></p>
+                </div>
+                <div class="bg-slate-50 rounded-xl p-4 border border-slate-100">
+                  <p class="font-bold text-navy-900">8th Grade Contest</p>
+                  <p class="text-2xl font-extrabold text-navy-900 mt-1">$45 <span class="text-sm font-medium text-slate-400">/ set of 30</span></p>
+                </div>
+              </div>
+              <a href="register.html" class="mt-6 block w-full text-center px-6 py-3 bg-navy-900 hover:bg-navy-800 text-white font-semibold rounded-xl transition-colors">Register School →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Algebra 1 Contests -->
+    <section id="algebra" class="py-16 lg:py-24 bg-white scroll-mt-32" aria-labelledby="algebra-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-5 gap-12 items-start">
+          <div class="lg:col-span-3">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-amber-50 text-amber-700 text-xs font-semibold rounded-full mb-4">
+              <span class="w-2 h-2 bg-amber-500 rounded-full"></span>
+              Algebra Course 1
+            </div>
+            <h2 id="algebra-heading" class="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight">Algebra Course 1 Contest</h2>
+            <p class="mt-4 text-slate-600 leading-relaxed">
+              Open to any student currently enrolled in an Algebra 1 course, regardless of grade level. This single annual contest focuses specifically on algebraic concepts and problem-solving.
+            </p>
+            <div class="mt-6 space-y-3">
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-amber-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                <p class="text-sm text-slate-600"><strong class="text-navy-900">Registration deadline:</strong> January 31, 2026</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-amber-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                <p class="text-sm text-slate-600"><strong class="text-navy-900">Materials ship:</strong> March</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-amber-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                <p class="text-sm text-slate-600"><strong class="text-navy-900">Contest date:</strong> April 15 or later</p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-2">
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6">
+              <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">Pricing</p>
+              <div class="bg-white rounded-xl p-4 border border-slate-100">
+                <p class="font-bold text-navy-900">Algebra 1 Contest</p>
+                <p class="text-2xl font-extrabold text-navy-900 mt-1">$45 <span class="text-sm font-medium text-slate-400">/ set of 30</span></p>
+              </div>
+              <a href="register.html" class="mt-6 block w-full text-center px-6 py-3 bg-navy-900 hover:bg-navy-800 text-white font-semibold rounded-xl transition-colors">Register School →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- High School Contests -->
+    <section id="highschool" class="py-16 lg:py-24 bg-slate-50 scroll-mt-32" aria-labelledby="hs-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-5 gap-12 items-start">
+          <div class="lg:col-span-3">
+            <div class="inline-flex items-center gap-2 px-3 py-1 bg-purple-50 text-purple-700 text-xs font-semibold rounded-full mb-4">
+              <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+              High School
+            </div>
+            <h2 id="hs-heading" class="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight">High School Contests</h2>
+            <p class="mt-4 text-slate-600 leading-relaxed">
+              Our most comprehensive program features six contests throughout the academic year, each covering different areas of mathematics. Schools compete in statewide league standings with results published monthly.
+            </p>
+            <div class="mt-6 space-y-3">
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                <p class="text-sm text-slate-600"><strong class="text-navy-900">Format:</strong> Six contests per year (October–March)</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                <p class="text-sm text-slate-600"><strong class="text-navy-900">Registration deadline:</strong> September 30, 2025</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                <p class="text-sm text-slate-600"><strong class="text-navy-900">Alternate dates:</strong> Available one week after each contest date</p>
+              </div>
+            </div>
+
+            <!-- Contest Dates -->
+            <div class="mt-8">
+              <h3 class="text-base font-bold text-navy-900 mb-4">2025–2026 Contest Schedule</h3>
+              <div class="space-y-2">
+                <div class="flex items-center gap-3 bg-white border border-slate-200 rounded-lg px-4 py-3">
+                  <span class="text-xs font-bold text-purple-600 bg-purple-50 px-2.5 py-1 rounded-md w-16 text-center">#1</span>
+                  <span class="text-sm text-slate-700">October 14, 2025</span>
+                </div>
+                <div class="flex items-center gap-3 bg-white border border-slate-200 rounded-lg px-4 py-3">
+                  <span class="text-xs font-bold text-purple-600 bg-purple-50 px-2.5 py-1 rounded-md w-16 text-center">#2</span>
+                  <span class="text-sm text-slate-700">November 11, 2025</span>
+                </div>
+                <div class="flex items-center gap-3 bg-white border border-slate-200 rounded-lg px-4 py-3">
+                  <span class="text-xs font-bold text-purple-600 bg-purple-50 px-2.5 py-1 rounded-md w-16 text-center">#3</span>
+                  <span class="text-sm text-slate-700">December 9, 2025</span>
+                </div>
+                <div class="flex items-center gap-3 bg-white border border-slate-200 rounded-lg px-4 py-3">
+                  <span class="text-xs font-bold text-purple-600 bg-purple-50 px-2.5 py-1 rounded-md w-16 text-center">#4</span>
+                  <span class="text-sm text-slate-700">January 13, 2026</span>
+                </div>
+                <div class="flex items-center gap-3 bg-white border border-slate-200 rounded-lg px-4 py-3">
+                  <span class="text-xs font-bold text-purple-600 bg-purple-50 px-2.5 py-1 rounded-md w-16 text-center">#5</span>
+                  <span class="text-sm text-slate-700">February 10, 2026</span>
+                </div>
+                <div class="flex items-center gap-3 bg-white border border-slate-200 rounded-lg px-4 py-3">
+                  <span class="text-xs font-bold text-purple-600 bg-purple-50 px-2.5 py-1 rounded-md w-16 text-center">#6</span>
+                  <span class="text-sm text-slate-700">March 10, 2026</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-2">
+            <div class="bg-white border border-purple-200 rounded-2xl p-6 ring-2 ring-purple-100">
+              <div class="flex items-center gap-2 mb-4">
+                <span class="bg-purple-600 text-white text-xs font-bold px-2.5 py-1 rounded-md">Most Popular</span>
+              </div>
+              <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-4">Pricing</p>
+              <div class="bg-slate-50 rounded-xl p-4 border border-slate-100">
+                <p class="font-bold text-navy-900">High School Package</p>
+                <p class="text-sm text-slate-500 mt-1">6 contests, 30 copies each</p>
+                <p class="text-3xl font-extrabold text-navy-900 mt-2">$100</p>
+              </div>
+              <p class="mt-4 text-xs text-slate-500">Late registrations accepted. Materials shipped in October.</p>
+              <a href="register.html" class="mt-6 block w-full text-center px-6 py-3 bg-gold-500 hover:bg-gold-400 text-navy-900 font-bold rounded-xl shadow-md hover:shadow-lg transition-all">Register School →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Complete Schedule Table -->
+    <section id="schedule" class="py-16 lg:py-24 bg-white scroll-mt-32" aria-labelledby="schedule-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <p class="text-gold-500 font-semibold text-sm tracking-wide uppercase mb-3">2025–2026 Season</p>
+          <h2 id="schedule-heading" class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">Complete Contest Schedule</h2>
+        </div>
+        <div class="overflow-x-auto rounded-2xl border border-slate-200">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-navy-900 text-white">
+                <th scope="col" class="px-6 py-4 text-left font-semibold">Contest Level</th>
+                <th scope="col" class="px-6 py-4 text-left font-semibold">Registration Deadline</th>
+                <th scope="col" class="px-6 py-4 text-left font-semibold">Materials Ship</th>
+                <th scope="col" class="px-6 py-4 text-left font-semibold">Contest Date(s)</th>
+                <th scope="col" class="px-6 py-4 text-right font-semibold">Price</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr class="hover:bg-slate-50 transition-colors">
+                <td class="px-6 py-4 font-medium text-navy-900">4th Grade</td>
+                <td class="px-6 py-4 text-slate-600">January 31, 2026</td>
+                <td class="px-6 py-4 text-slate-600">March</td>
+                <td class="px-6 py-4 text-slate-600">April 15 or later</td>
+                <td class="px-6 py-4 text-right font-semibold text-navy-900">$45</td>
+              </tr>
+              <tr class="hover:bg-slate-50 transition-colors bg-slate-50/50">
+                <td class="px-6 py-4 font-medium text-navy-900">5th Grade</td>
+                <td class="px-6 py-4 text-slate-600">January 31, 2026</td>
+                <td class="px-6 py-4 text-slate-600">March</td>
+                <td class="px-6 py-4 text-slate-600">April 15 or later</td>
+                <td class="px-6 py-4 text-right font-semibold text-navy-900">$45</td>
+              </tr>
+              <tr class="hover:bg-slate-50 transition-colors">
+                <td class="px-6 py-4 font-medium text-navy-900">6th Grade</td>
+                <td class="px-6 py-4 text-slate-600">December 31, 2025</td>
+                <td class="px-6 py-4 text-slate-600">January</td>
+                <td class="px-6 py-4 text-slate-600">Feb 17 or Feb 24, 2026</td>
+                <td class="px-6 py-4 text-right font-semibold text-navy-900">$45</td>
+              </tr>
+              <tr class="hover:bg-slate-50 transition-colors bg-slate-50/50">
+                <td class="px-6 py-4 font-medium text-navy-900">7th Grade</td>
+                <td class="px-6 py-4 text-slate-600">December 31, 2025</td>
+                <td class="px-6 py-4 text-slate-600">January</td>
+                <td class="px-6 py-4 text-slate-600">Feb 17 or Feb 24, 2026</td>
+                <td class="px-6 py-4 text-right font-semibold text-navy-900">$45</td>
+              </tr>
+              <tr class="hover:bg-slate-50 transition-colors">
+                <td class="px-6 py-4 font-medium text-navy-900">8th Grade</td>
+                <td class="px-6 py-4 text-slate-600">December 31, 2025</td>
+                <td class="px-6 py-4 text-slate-600">January</td>
+                <td class="px-6 py-4 text-slate-600">Feb 17 or Feb 24, 2026</td>
+                <td class="px-6 py-4 text-right font-semibold text-navy-900">$45</td>
+              </tr>
+              <tr class="hover:bg-slate-50 transition-colors bg-slate-50/50">
+                <td class="px-6 py-4 font-medium text-navy-900">Algebra 1</td>
+                <td class="px-6 py-4 text-slate-600">January 31, 2026</td>
+                <td class="px-6 py-4 text-slate-600">March</td>
+                <td class="px-6 py-4 text-slate-600">April 15 or later</td>
+                <td class="px-6 py-4 text-right font-semibold text-navy-900">$45</td>
+              </tr>
+              <tr class="hover:bg-slate-50 transition-colors">
+                <td class="px-6 py-4 font-medium text-navy-900">High School</td>
+                <td class="px-6 py-4 text-slate-600">September 30, 2025</td>
+                <td class="px-6 py-4 text-slate-600">October</td>
+                <td class="px-6 py-4 text-slate-600">6 contests, Oct–Mar</td>
+                <td class="px-6 py-4 text-right font-semibold text-navy-900">$100</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-4 text-xs text-slate-500 text-center">All prices are per set of 30 contest copies. Late registrations are accepted. Contests may be taken online.</p>
+      </div>
+    </section>
+
+    <!-- Sample Contests & Bookstore -->
+    <section id="samples" class="py-16 lg:py-24 bg-slate-50 scroll-mt-32" aria-labelledby="resources-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <p class="text-gold-500 font-semibold text-sm tracking-wide uppercase mb-3">Resources</p>
+          <h2 id="resources-heading" class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">Sample Contests &amp; Study Materials</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8" id="bookstore">
+          <!-- Sample Contests -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-8">
+            <div class="w-12 h-12 bg-navy-900/5 rounded-xl flex items-center justify-center mb-5">
+              <svg class="w-6 h-6 text-navy-700" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-navy-900 mb-3">Sample Contests</h3>
+            <p class="text-slate-600 leading-relaxed mb-6">
+              Preview our contest format and difficulty level with free sample problems. Available for all grade levels.
+            </p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center gap-2 text-sm text-slate-600">
+                <svg class="w-4 h-4 text-gold-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                4th &amp; 5th Grade Samples
+              </li>
+              <li class="flex items-center gap-2 text-sm text-slate-600">
+                <svg class="w-4 h-4 text-gold-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                6th, 7th &amp; 8th Grade Samples
+              </li>
+              <li class="flex items-center gap-2 text-sm text-slate-600">
+                <svg class="w-4 h-4 text-gold-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                High School &amp; Algebra 1 Samples
+              </li>
+            </ul>
+            <a href="#" class="inline-flex items-center text-sm font-semibold text-navy-600 hover:text-gold-500 transition-colors">
+              View sample contests
+              <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg>
+            </a>
+          </div>
+
+          <!-- Bookstore -->
+          <div class="bg-white border border-slate-200 rounded-2xl p-8">
+            <div class="w-12 h-12 bg-navy-900/5 rounded-xl flex items-center justify-center mb-5">
+              <svg class="w-6 h-6 text-navy-700" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-navy-900 mb-3">Contest Problem Books</h3>
+            <p class="text-slate-600 leading-relaxed mb-6">
+              Comprehensive collections of past contest problems with detailed solutions. Perfect for practice and preparation.
+            </p>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center gap-2 text-sm text-slate-600">
+                <svg class="w-4 h-4 text-gold-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                Grades 4–6 Problem Books
+              </li>
+              <li class="flex items-center gap-2 text-sm text-slate-600">
+                <svg class="w-4 h-4 text-gold-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                Grades 7–8 &amp; Algebra 1 Books
+              </li>
+              <li class="flex items-center gap-2 text-sm text-slate-600">
+                <svg class="w-4 h-4 text-gold-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                High School Contest Books
+              </li>
+              <li class="flex items-center gap-2 text-sm text-slate-600">
+                <svg class="w-4 h-4 text-gold-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                Math League T-Shirts
+              </li>
+            </ul>
+            <a href="https://www.e-junkie.com/ecom/gb.php?c=cart&cl=34277&ejc=2" target="_blank" rel="noopener" class="inline-flex items-center text-sm font-semibold text-navy-600 hover:text-gold-500 transition-colors">
+              Visit bookstore
+              <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 lg:py-24 bg-white" aria-labelledby="comp-cta-heading">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 id="comp-cta-heading" class="text-3xl sm:text-4xl font-extrabold text-navy-900 tracking-tight">Ready to get started?</h2>
+        <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">Registration is open for the 2025–2026 contest season. Join thousands of schools across North America.</p>
+        <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+          <a href="register.html" class="inline-flex items-center justify-center px-8 py-4 bg-navy-900 hover:bg-navy-800 text-white font-bold text-base rounded-xl shadow-lg hover:shadow-xl transition-all">Register Your School <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg></a>
+          <a href="results.html" class="inline-flex items-center justify-center px-8 py-4 bg-white border-2 border-slate-300 hover:border-navy-600 text-navy-900 font-semibold text-base rounded-xl hover:bg-slate-50 transition-all">View Latest Results</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-navy-900 text-slate-300" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
+        <div class="col-span-2 md:col-span-1">
+          <a href="../index.html" class="inline-flex items-center gap-3 group" aria-label="The Math League — Home"><div class="w-10 h-10 bg-gold-500 rounded-lg flex items-center justify-center shadow-md group-hover:bg-gold-400 transition-colors"><svg class="w-6 h-6 text-navy-900" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.745 3A23.933 23.933 0 0 0 3 12c0 3.183.62 6.22 1.745 9M19.255 3C20.38 5.78 21 8.817 21 12s-.62 6.22-1.745 9m-13.51-9h12.51m-6.255-9v18"/></svg></div><span class="text-white font-extrabold text-lg">The Math League</span></a>
+          <p class="mt-4 text-sm text-slate-400 leading-relaxed">Inspiring mathematical excellence since 1977.</p>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold text-sm mb-4">Programs</h3>
+          <ul class="space-y-2.5" role="list">
+            <li><a href="competitions.html" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">Competitions</a></li>
+            <li><a href="summer-programs.html" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">Summer Camp</a></li>
+            <li><a href="summer-programs.html#online-challenge" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">Online Challenge</a></li>
+            <li><a href="results.html" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">Results</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold text-sm mb-4">Resources</h3>
+          <ul class="space-y-2.5" role="list">
+            <li><a href="results.html#newsletters" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">Newsletters</a></li>
+            <li><a href="competitions.html#samples" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">Sample Contests</a></li>
+            <li><a href="competitions.html#bookstore" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">Contest Books</a></li>
+            <li><a href="https://www.e-junkie.com/ecom/gb.php?c=cart&cl=34277&ejc=2" target="_blank" rel="noopener" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">Online Store</a></li>
+            <li><a href="about.html" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">About Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-white font-semibold text-sm mb-4">Contact</h3>
+          <ul class="space-y-2.5" role="list">
+            <li><a href="mailto:comments@mathleague.com" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">comments@mathleague.com</a></li>
+            <li><a href="register.html" class="text-sm text-slate-400 hover:text-gold-400 transition-colors">Register a School</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 pt-8 border-t border-navy-700 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-xs text-slate-500">&copy; 2026 The Math League. All rights reserved.</p>
+        <p class="text-xs text-slate-500">Founded 1977 by Steven R. Conrad &amp; Daniel Flegler</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-02-18",
+  "description": "Controlled vocabulary for site tagging, filtering, and pricing. All sites are math-education related — no 'education' tag needed.",
+
+  "tags": {
+    "geographic": {
+      "description": "Where the organization primarily operates or the audience it serves.",
+      "values": [
+        "American",
+        "Canadian",
+        "International",
+        "European",
+        "Asian",
+        "Regional",
+        "Statewide",
+        "Global"
+      ]
+    },
+    "type": {
+      "description": "What the organization fundamentally does.",
+      "values": [
+        "Competition",
+        "Program",
+        "Store",
+        "Publisher",
+        "Tutoring",
+        "Camp",
+        "League",
+        "Club",
+        "Foundation",
+        "Resource"
+      ]
+    },
+    "scale": {
+      "description": "The size and reach of the organization.",
+      "values": [
+        "Big",
+        "Small",
+        "Medium"
+      ]
+    },
+    "traffic": {
+      "description": "Estimated web traffic / audience reach. Based on participation numbers, Google Trends, and site analytics where available.",
+      "values": [
+        "High-Traffic",
+        "Medium-Traffic",
+        "Low-Traffic"
+      ]
+    },
+    "features": {
+      "description": "Notable features of the site itself.",
+      "values": [
+        "Registration",
+        "E-Commerce",
+        "Results-Portal",
+        "Blog",
+        "Events",
+        "Gallery",
+        "Video",
+        "Forum",
+        "Newsletter",
+        "Members-Only",
+        "Donations",
+        "Multi-Language"
+      ]
+    }
+  },
+
+  "complexity": {
+    "description": "Describes how complex the website redesign is. Used instead of pricing tiers — complexity directly informs fair pricing based on actual work involved.",
+    "levels": {
+      "simple": {
+        "label": "Simple",
+        "description": "1–3 pages, mostly informational. Minimal interactivity. Basic layout with standard sections (hero, about, contact). No forms, no e-commerce, no dynamic content.",
+        "typicalPages": "1–3",
+        "examples": ["Single landing page", "Basic club homepage", "Simple event page"]
+      },
+      "moderate": {
+        "label": "Moderate",
+        "description": "4–7 pages with some interactive elements. May include registration links, pricing tables, FAQ accordions, image galleries, or external e-commerce integration. Multiple distinct content types across pages.",
+        "typicalPages": "4–7",
+        "examples": ["Small competition site with results", "Tutoring site with booking", "Camp site with schedule and registration"]
+      },
+      "complex": {
+        "label": "Complex",
+        "description": "8–15+ pages with significant interactivity. Includes features like user authentication, CMS integration, dynamic results/leaderboards, payment processing, member portals, or multi-step registration flows. Multiple interconnected systems.",
+        "typicalPages": "8–15",
+        "examples": ["Full competition platform with live results", "Online course marketplace", "Multi-program organization with member portal"]
+      },
+      "enterprise": {
+        "label": "Enterprise",
+        "description": "Large-scale site with 15+ pages, custom application logic, database-driven content, API integrations, admin dashboards, role-based access, and/or multi-tenant architecture. Essentially a web application, not just a website.",
+        "typicalPages": "15+",
+        "examples": ["National competition platform with school dashboards", "LMS with progress tracking", "Multi-organization portal"]
+      }
+    }
+  },
+
+  "organizationTypes": {
+    "description": "The legal/operational structure of the client organization.",
+    "values": [
+      "nonprofit",
+      "for-profit",
+      "government",
+      "school-district",
+      "university",
+      "individual",
+      "volunteer-run",
+      "unknown"
+    ]
+  },
+
+  "statuses": {
+    "description": "Lifecycle status of the site redesign project.",
+    "values": [
+      "prospect",
+      "in-progress",
+      "review",
+      "complete",
+      "deployed",
+      "archived",
+      "paused"
+    ]
+  }
+}

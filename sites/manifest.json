@@ -1,0 +1,50 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-02-18",
+  "owner": "Carter Matherne",
+  "repository": "CMath-ProClub/Math",
+  "taxonomyRef": "../shared/taxonomy.json",
+
+  "sites": [
+    {
+      "slug": "mathleague-redesign",
+      "name": "Math League — Full Redesign",
+      "sourceUrl": "https://mathleague.com",
+      "status": "complete",
+      "created": "2026-02-18",
+      "updated": "2026-02-18",
+
+      "tags": ["American", "International", "Competition", "Store", "High-Traffic", "Big"],
+      "complexity": "moderate",
+
+      "organization": {
+        "name": "Mathematics Leagues, Inc.",
+        "type": "for-profit",
+        "isNonprofit": false,
+        "website": "https://mathleague.com"
+      },
+
+      "audience": {
+        "reach": "1,000,000+ students annually",
+        "primaryRegions": ["United States", "Canada"],
+        "hasInternationalPresence": true
+      },
+
+      "scope": {
+        "pageCount": 7,
+        "hasShop": true,
+        "hasRegistration": true,
+        "hasCMS": false,
+        "hasAuth": false
+      },
+
+      "tech": ["HTML5", "Tailwind CSS (CDN)", "Vanilla JavaScript"],
+
+      "portfolio": {
+        "visible": true,
+        "featured": true,
+        "shortDescription": "Complete 7-page redesign for the largest K-12 math competition in North America (1M+ annual participants)."
+      }
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/settings.json
+*.swp
+*.swo
+*~
+
+# Dependencies (if tooling is ever added)
+node_modules/
+dist/
+.cache/
+.parcel-cache/
+
+# Environment
+.env
+.env.local
