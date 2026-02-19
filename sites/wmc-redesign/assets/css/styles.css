@@ -1,0 +1,236 @@
+/* WMC — Shared Custom Styles */
+
+[x-cloak] {
+  display: none !important;
+}
+
+/* ===== Scroll-reveal animation ===== */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Floating math symbols ===== */
+.math-bg-symbols {
+  position: relative;
+  overflow: hidden;
+}
+.math-bg-symbols::before {
+  content: "∑  π  √  ∞  Δ  ∫  θ  ≈  ×  φ  λ  ∂  ε  σ  Ω";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  letter-spacing: 2rem;
+  line-height: 4rem;
+  color: currentColor;
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: 0;
+  animation: math-drift 60s linear infinite;
+  white-space: nowrap;
+  width: 200%;
+}
+
+@keyframes math-drift {
+  0%   { transform: translate(0, 0); }
+  50%  { transform: translate(-10%, 4%); }
+  100% { transform: translate(0, 0); }
+}
+
+/* ===== Hero glow ===== */
+.hero-glow::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at 30% 50%, rgba(23,166,137,0.08) 0%, transparent 50%),
+              radial-gradient(ellipse at 70% 60%, rgba(212,160,23,0.06) 0%, transparent 50%);
+  animation: glow-shift 20s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes glow-shift {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(5%, -3%) scale(1.05); }
+  66%  { transform: translate(-3%, 5%) scale(0.97); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+/* ===== Dot grid ===== */
+.dot-grid-bg {
+  background-image: radial-gradient(circle, rgba(4,31,26,0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ===== Diagonal lines ===== */
+.diagonal-lines-bg {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 35px,
+    rgba(4,31,26,0.015) 35px,
+    rgba(4,31,26,0.015) 36px
+  );
+}
+
+/* ===== Cross pattern ===== */
+.cross-pattern-bg {
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 18v4M18 20h4' stroke='%23041F1A' stroke-opacity='0.04' stroke-width='1' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+/* ===== Gradient mesh ===== */
+.gradient-mesh-bg {
+  position: relative;
+}
+.gradient-mesh-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 600px 400px at 10% 20%, rgba(23,166,137,0.03) 0%, transparent 70%),
+    radial-gradient(ellipse 500px 500px at 90% 80%, rgba(212,160,23,0.03) 0%, transparent 70%),
+    radial-gradient(ellipse 400px 300px at 50% 50%, rgba(15,107,94,0.02) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ===== Math watermark ===== */
+.math-watermark {
+  position: relative;
+  overflow: hidden;
+}
+.math-watermark::before {
+  content: "∫";
+  position: absolute;
+  font-size: 20rem;
+  font-weight: 800;
+  color: rgba(4,31,26,0.015);
+  top: -2rem;
+  right: -3rem;
+  pointer-events: none;
+  z-index: 0;
+  line-height: 1;
+}
+.math-watermark-pi::before { content: "π"; }
+.math-watermark-sigma::before { content: "Σ"; }
+.math-watermark-delta::before { content: "Δ"; }
+.math-watermark-theta::before { content: "θ"; }
+.math-watermark-omega::before { content: "Ω"; }
+.math-watermark-left::before { right: auto; left: -3rem; }
+
+/* ===== Wave divider ===== */
+.wave-divider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.wave-divider svg {
+  display: block;
+  width: 100%;
+  height: 48px;
+}
+@media (min-width: 768px) {
+  .wave-divider svg { height: 64px; }
+}
+.wave-divider-flip svg {
+  transform: scaleY(-1);
+}
+
+/* ===== Floating particles ===== */
+.floating-particles {
+  position: relative;
+  overflow: hidden;
+}
+.floating-particles::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle 2px at 15% 25%, rgba(23,166,137,0.08) 0%, transparent 100%),
+    radial-gradient(circle 2px at 85% 15%, rgba(212,160,23,0.06) 0%, transparent 100%),
+    radial-gradient(circle 1.5px at 45% 75%, rgba(23,166,137,0.06) 0%, transparent 100%),
+    radial-gradient(circle 2px at 70% 60%, rgba(212,160,23,0.05) 0%, transparent 100%),
+    radial-gradient(circle 1.5px at 25% 90%, rgba(15,107,94,0.04) 0%, transparent 100%),
+    radial-gradient(circle 2px at 90% 45%, rgba(23,166,137,0.05) 0%, transparent 100%);
+  animation: particle-drift 30s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes particle-drift {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(3%, -2%); }
+  50%  { transform: translate(-2%, 3%); }
+  75%  { transform: translate(1%, -1%); }
+  100% { transform: translate(0, 0); }
+}
+
+/* ===== Card glow on hover ===== */
+.card-glow-hover {
+  position: relative;
+}
+.card-glow-hover::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(23,166,137,0.3), rgba(212,160,23,0.2), rgba(23,166,137,0.3));
+  background-size: 300% 300%;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+  animation: gradient-rotate 6s ease-in-out infinite;
+}
+.card-glow-hover:hover::before {
+  opacity: 1;
+}
+
+@keyframes gradient-rotate {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== Pulse dot ===== */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.5; transform: scale(1.5); }
+}
+.pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* ===== Scrollbar hide ===== */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===== Golden Ticket shimmer ===== */
+.golden-ticket {
+  background: linear-gradient(135deg, #D4A017 0%, #F0CC5B 25%, #E8B931 50%, #D4A017 75%, #F0CC5B 100%);
+  background-size: 400% 400%;
+  animation: ticket-shimmer 6s ease-in-out infinite;
+}
+@keyframes ticket-shimmer {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

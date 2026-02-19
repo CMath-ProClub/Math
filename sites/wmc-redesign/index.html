@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>World Mathematics Championships® — Where Maths Meets the World</title>
+  <meta name="description" content="The World Mathematics Championships® (WMC) is the world's premier international mathematics competition, inspiring young mathematicians across 6 continents for 25+ years." />
+  <meta name="keywords" content="World Mathematics Championships, WMC, math competition, international math, SEAMC, NEAMC, Eunoia Ventures, math olympiad" />
+  <meta name="author" content="Eunoia Ventures" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="World Mathematics Championships® — Where Maths Meets the World" />
+  <meta property="og:description" content="25+ years inspiring young mathematicians across 6 continents. Regional qualifiers and world finals every year." />
+  <meta property="og:image" content="https://eunoia.ventures/gallery/web_assets/wmc.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="World Mathematics Championships®" />
+  <meta name="twitter:description" content="The world's premier international mathematics competition for young minds." />
+  <meta name="twitter:image" content="https://eunoia.ventures/gallery/web_assets/wmc.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://eunoia.ventures/gallery/web_assets/wmc.jpg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tailwind.config.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body class="bg-white text-gray-800 font-sans antialiased">
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="fixed top-0 inset-x-0 z-50 bg-teal-950/95 backdrop-blur-md border-b border-teal-800/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 group">
+          <img src="https://eunoia.ventures/gallery/web_assets/wmc.jpg" alt="WMC Logo" class="h-9 w-9 rounded-lg shadow-lg ring-1 ring-teal-700/40 group-hover:ring-gold-400/60 transition" />
+          <div>
+            <span class="text-white font-bold text-lg tracking-tight">WMC</span>
+            <span class="hidden sm:inline text-teal-300 text-xs ml-2 font-medium">World Mathematics Championships®</span>
+          </div>
+        </a>
+
+        <!-- Desktop links -->
+        <div class="hidden lg:flex items-center gap-1">
+          <a href="index.html" class="px-3 py-2 text-sm font-medium text-gold-400 rounded-lg">Home</a>
+          <a href="pages/experience.html" class="px-3 py-2 text-sm font-medium text-teal-200 hover:text-white hover:bg-teal-800/50 rounded-lg transition">Experience</a>
+          <a href="pages/rounds.html" class="px-3 py-2 text-sm font-medium text-teal-200 hover:text-white hover:bg-teal-800/50 rounded-lg transition">Rounds</a>
+          <a href="pages/regionals.html" class="px-3 py-2 text-sm font-medium text-teal-200 hover:text-white hover:bg-teal-800/50 rounded-lg transition">Regionals</a>
+          <a href="pages/finals.html" class="px-3 py-2 text-sm font-medium text-teal-200 hover:text-white hover:bg-teal-800/50 rounded-lg transition">Finals</a>
+          <a href="pages/partners.html" class="px-3 py-2 text-sm font-medium text-teal-200 hover:text-white hover:bg-teal-800/50 rounded-lg transition">Partners</a>
+          <a href="pages/contact.html" class="px-3 py-2 text-sm font-medium text-teal-200 hover:text-white hover:bg-teal-800/50 rounded-lg transition">Contact</a>
+          <span class="mx-2 h-5 w-px bg-teal-700/60"></span>
+          <a href="../../index.html" class="px-3 py-2 text-xs font-semibold text-teal-400 hover:text-gold-400 transition" title="Back to Hub">⬅ Hub</a>
+          <a href="https://competition.academy/login" target="_blank" class="ml-2 px-4 py-2 text-sm font-semibold text-teal-950 bg-gold-400 hover:bg-gold-300 rounded-lg transition shadow-lg shadow-gold-400/20">Sign In</a>
+        </div>
+
+        <!-- Mobile toggle -->
+        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-teal-200 hover:text-white hover:bg-teal-800/50 transition" aria-label="Toggle menu">
+          <svg id="menu-icon-open" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-teal-950/98 border-t border-teal-800/50 backdrop-blur-md">
+      <div class="px-4 py-4 space-y-1">
+        <a href="index.html" class="block px-4 py-2.5 text-sm font-medium text-gold-400 bg-teal-800/30 rounded-lg">Home</a>
+        <a href="pages/experience.html" class="block px-4 py-2.5 text-sm font-medium text-teal-200 hover:text-white hover:bg-teal-800/40 rounded-lg transition">Experience</a>
+        <a href="pages/rounds.html" class="block px-4 py-2.5 text-sm font-medium text-teal-200 hover:text-white hover:bg-teal-800/40 rounded-lg transition">Rounds</a>
+        <a href="pages/regionals.html" class="block px-4 py-2.5 text-sm font-medium text-teal-200 hover:text-white hover:bg-teal-800/40 rounded-lg transition">Regionals</a>
+        <a href="pages/finals.html" class="block px-4 py-2.5 text-sm font-medium text-teal-200 hover:text-white hover:bg-teal-800/40 rounded-lg transition">Finals</a>
+        <a href="pages/partners.html" class="block px-4 py-2.5 text-sm font-medium text-teal-200 hover:text-white hover:bg-teal-800/40 rounded-lg transition">Partners</a>
+        <a href="pages/contact.html" class="block px-4 py-2.5 text-sm font-medium text-teal-200 hover:text-white hover:bg-teal-800/40 rounded-lg transition">Contact</a>
+        <div class="pt-3 mt-3 border-t border-teal-800/50 flex flex-col gap-2">
+          <a href="../../index.html" class="px-4 py-2.5 text-sm font-medium text-teal-400 hover:text-gold-400 transition">⬅ Back to Hub</a>
+          <a href="https://competition.academy/login" target="_blank" class="px-4 py-2.5 text-sm font-semibold text-center text-teal-950 bg-gold-400 hover:bg-gold-300 rounded-lg transition">Sign In</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="relative min-h-[90vh] flex items-center bg-gradient-to-br from-teal-950 via-teal-900 to-teal-950 hero-glow math-bg-symbols overflow-hidden pt-20 lg:pt-24">
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%221%22%20fill%3D%22rgba(255%2C255%2C255%2C0.03)%22%2F%3E%3C%2Fsvg%3E')] opacity-60"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Text -->
+        <div class="text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-800/50 border border-teal-700/40 mb-6">
+            <span class="w-2 h-2 rounded-full bg-gold-400 pulse-dot"></span>
+            <span class="text-teal-200 text-xs font-medium tracking-wide uppercase">25+ Years of Excellence</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-[1.08] tracking-tight">
+            World<br />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 via-gold-300 to-gold-400">Mathematics</span><br />
+            Championships<span class="text-gold-400">®</span>
+          </h1>
+
+          <p class="mt-6 text-lg lg:text-xl text-teal-200/80 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            The world's premier international mathematics competition — inspiring young minds across <strong class="text-white">6 continents</strong> and <strong class="text-white">100+ partner schools</strong>.
+          </p>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <a href="pages/regionals.html" class="px-8 py-3.5 bg-gold-400 hover:bg-gold-300 text-teal-950 font-bold rounded-xl shadow-lg shadow-gold-400/20 hover:shadow-gold-400/40 transition-all duration-300 text-center">
+              Find Your Regional →
+            </a>
+            <a href="pages/experience.html" class="px-8 py-3.5 border-2 border-teal-500/40 hover:border-gold-400/60 text-white font-semibold rounded-xl hover:bg-teal-800/30 transition-all duration-300 text-center">
+              Discover the WMC
+            </a>
+          </div>
+        </div>
+
+        <!-- Promo video -->
+        <div class="relative reveal-on-scroll">
+          <div class="absolute -inset-4 bg-gradient-to-r from-teal-500/20 via-gold-400/10 to-teal-500/20 rounded-2xl blur-xl"></div>
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl ring-1 ring-teal-700/30">
+            <div class="aspect-video">
+              <iframe class="w-full h-full" src="https://www.youtube.com/embed/4Hf7ri_mqCc?rel=0" title="WMC Promo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero bottom wave -->
+    <div class="absolute bottom-0 left-0 w-full wave-divider">
+      <svg viewBox="0 0 1440 64" preserveAspectRatio="none" fill="white"><path d="M0,32 C360,64 720,0 1080,32 C1260,48 1380,56 1440,56 L1440,64 L0,64 Z"/></svg>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       IMPACT STATS
+       ============================================================ -->
+  <section class="py-16 bg-white dot-grid-bg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 reveal-on-scroll">
+        <div class="text-center">
+          <div class="text-4xl lg:text-5xl font-extrabold text-teal-700">25+</div>
+          <div class="mt-1 text-sm text-gray-500 font-medium">Years Running</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl lg:text-5xl font-extrabold text-teal-700">6</div>
+          <div class="mt-1 text-sm text-gray-500 font-medium">Continents</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl lg:text-5xl font-extrabold text-teal-700">100+</div>
+          <div class="mt-1 text-sm text-gray-500 font-medium">Partner Schools</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl lg:text-5xl font-extrabold text-teal-700">14</div>
+          <div class="mt-1 text-sm text-gray-500 font-medium">Competition Rounds</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       COMPETITION LEVELS
+       ============================================================ -->
+  <section class="py-20 lg:py-28 bg-gray-50 diagonal-lines-bg math-watermark-sigma relative overflow-hidden">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14 reveal-on-scroll">
+        <span class="inline-block px-4 py-1 rounded-full bg-teal-100 text-teal-700 text-xs font-semibold uppercase tracking-widest mb-4">Competition Pathways</span>
+        <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight">Four Levels, One Championship</h2>
+        <p class="mt-4 text-gray-500 text-lg">From Middle School enrichment to Senior international finals — there's a place for every aspiring mathematician.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal-on-scroll">
+        <!-- Senior -->
+        <div class="group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl border border-gray-100 hover:border-teal-200 transition-all duration-300 card-glow-hover overflow-hidden">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-600 to-teal-700 flex items-center justify-center text-white text-xl font-bold shadow-lg mb-4">S</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Senior Division</h3>
+          <p class="text-sm text-gray-500 mb-3">Age ~16 • Up to Grade 12</p>
+          <p class="text-sm text-gray-600 leading-relaxed">The flagship competition. Regional qualifiers from February to May, culminating in the World Finals at Imperial College London.</p>
+          <div class="mt-4 pt-3 border-t border-gray-100">
+            <span class="text-xs font-semibold text-teal-600">Feb – Jul season</span>
+          </div>
+        </div>
+
+        <!-- Junior -->
+        <div class="group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl border border-gray-100 hover:border-teal-200 transition-all duration-300 card-glow-hover overflow-hidden">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center text-white text-xl font-bold shadow-lg mb-4">J</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Junior Division</h3>
+          <p class="text-sm text-gray-500 mb-3">Age ~14 • Up to Grade 10</p>
+          <p class="text-sm text-gray-600 leading-relaxed">Same world-class format for younger competitors. Regionals from September to November, with World Finals at the University of Melbourne.</p>
+          <div class="mt-4 pt-3 border-t border-gray-100">
+            <span class="text-xs font-semibold text-emerald-600">Sep – Dec season</span>
+          </div>
+        </div>
+
+        <!-- Middle School -->
+        <div class="group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl border border-gray-100 hover:border-teal-200 transition-all duration-300 card-glow-hover overflow-hidden">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-sky-500 to-sky-600 flex items-center justify-center text-white text-xl font-bold shadow-lg mb-4">M</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Middle School</h3>
+          <p class="text-sm text-gray-500 mb-3">Age ~12 • Up to Grade 9</p>
+          <p class="text-sm text-gray-600 leading-relaxed">An enrichment pathway introducing young students to the WMC competition format, collaborative maths, and problem-solving.</p>
+          <div class="mt-4 pt-3 border-t border-gray-100">
+            <span class="text-xs font-semibold text-sky-600">Enrichment track</span>
+          </div>
+        </div>
+
+        <!-- High School -->
+        <div class="group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl border border-gray-100 hover:border-teal-200 transition-all duration-300 card-glow-hover overflow-hidden">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-500 to-violet-600 flex items-center justify-center text-white text-xl font-bold shadow-lg mb-4">H</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">High School</h3>
+          <p class="text-sm text-gray-500 mb-3">Age ~15 • Up to Grade 12</p>
+          <p class="text-sm text-gray-600 leading-relaxed">An enrichment pathway for older students wanting to experience international-level math challenges in a team environment.</p>
+          <div class="mt-4 pt-3 border-t border-gray-100">
+            <span class="text-xs font-semibold text-violet-600">Enrichment track</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave -->
+  <div class="wave-divider wave-divider-flip bg-gray-50">
+    <svg viewBox="0 0 1440 64" preserveAspectRatio="none" fill="white"><path d="M0,32 C360,64 720,0 1080,32 C1260,48 1380,56 1440,56 L1440,64 L0,64 Z"/></svg>
+  </div>
+
+  <!-- ============================================================
+       FIVE SKILLS FRAMEWORK (preview)
+       ============================================================ -->
+  <section class="py-20 lg:py-28 bg-white floating-particles relative overflow-hidden">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14 reveal-on-scroll">
+        <span class="inline-block px-4 py-1 rounded-full bg-gold-400/10 text-gold-500 text-xs font-semibold uppercase tracking-widest mb-4">Beyond the Test</span>
+        <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight">Five Skills. One Complete Mathematician.</h2>
+        <p class="mt-4 text-gray-500 text-lg">WMC assesses more than just answers — it develops the 21st-century skills every student needs.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5 reveal-on-scroll">
+        <!-- Personal Endeavour -->
+        <div class="text-center p-5 rounded-2xl bg-gradient-to-b from-teal-50 to-white border border-teal-100 hover:shadow-lg transition-all duration-300">
+          <div class="w-14 h-14 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center mx-auto mb-3 text-2xl">🎯</div>
+          <h3 class="font-bold text-gray-900 text-sm">Personal Endeavour</h3>
+          <p class="text-xs text-gray-500 mt-1">Technical Knowledge</p>
+        </div>
+        <!-- Synergy -->
+        <div class="text-center p-5 rounded-2xl bg-gradient-to-b from-emerald-50 to-white border border-emerald-100 hover:shadow-lg transition-all duration-300">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center mx-auto mb-3 text-2xl">🤝</div>
+          <h3 class="font-bold text-gray-900 text-sm">Synergy</h3>
+          <p class="text-xs text-gray-500 mt-1">Collaboration</p>
+        </div>
+        <!-- Alliance -->
+        <div class="text-center p-5 rounded-2xl bg-gradient-to-b from-sky-50 to-white border border-sky-100 hover:shadow-lg transition-all duration-300">
+          <div class="w-14 h-14 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center mx-auto mb-3 text-2xl">💬</div>
+          <h3 class="font-bold text-gray-900 text-sm">Alliance</h3>
+          <p class="text-xs text-gray-500 mt-1">Communication</p>
+        </div>
+        <!-- Dynamic -->
+        <div class="text-center p-5 rounded-2xl bg-gradient-to-b from-violet-50 to-white border border-violet-100 hover:shadow-lg transition-all duration-300">
+          <div class="w-14 h-14 rounded-2xl bg-violet-100 text-violet-700 flex items-center justify-center mx-auto mb-3 text-2xl">♟️</div>
+          <h3 class="font-bold text-gray-900 text-sm">Dynamic</h3>
+          <p class="text-xs text-gray-500 mt-1">Strategy & Creativity</p>
+        </div>
+        <!-- Pure Rigour -->
+        <div class="text-center p-5 rounded-2xl bg-gradient-to-b from-amber-50 to-white border border-amber-100 hover:shadow-lg transition-all duration-300">
+          <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center mx-auto mb-3 text-2xl">🔬</div>
+          <h3 class="font-bold text-gray-900 text-sm">Pure Rigour</h3>
+          <p class="text-xs text-gray-500 mt-1">Logic & Proof</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-10 reveal-on-scroll">
+        <a href="pages/experience.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-teal-700 hover:bg-teal-600 text-white font-semibold shadow-lg transition">
+          Explore the Full Experience
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       UPCOMING REGIONALS HIGHLIGHT
+       ============================================================ -->
+  <section class="py-20 lg:py-28 bg-gradient-to-br from-teal-950 via-teal-900 to-teal-950 relative overflow-hidden math-bg-symbols">
+    <div class="absolute inset-0 bg-gradient-to-t from-teal-950/50 to-transparent pointer-events-none"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14 reveal-on-scroll">
+        <span class="inline-block px-4 py-1 rounded-full bg-teal-800/60 border border-teal-700/40 text-gold-400 text-xs font-semibold uppercase tracking-widest mb-4">2026 Season</span>
+        <h2 class="text-3xl lg:text-4xl font-extrabold text-white tracking-tight">Upcoming Regional Qualifiers</h2>
+        <p class="mt-4 text-teal-200/70 text-lg">Compete in your region for a chance at the World Finals Golden Ticket.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal-on-scroll">
+        <!-- Singapore Schools -->
+        <div class="bg-teal-800/30 backdrop-blur-sm rounded-2xl p-6 border border-teal-700/30 hover:border-gold-400/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-2xl">🇸🇬</span>
+            <div>
+              <h3 class="text-white font-bold">Singapore Schools Senior</h3>
+              <p class="text-teal-300 text-xs">UWCSEA Dover</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 text-teal-200 text-sm mb-2">
+            <svg class="w-4 h-4 text-gold-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            28 February 2026
+          </div>
+          <div class="text-teal-400 text-xs font-medium">SGD 40 / student</div>
+        </div>
+
+        <!-- SISMC -->
+        <div class="bg-teal-800/30 backdrop-blur-sm rounded-2xl p-6 border border-teal-700/30 hover:border-gold-400/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-2xl">🇸🇬</span>
+            <div>
+              <h3 class="text-white font-bold">SISMC Secondary</h3>
+              <p class="text-teal-300 text-xs">Nexus International School</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 text-teal-200 text-sm mb-2">
+            <svg class="w-4 h-4 text-gold-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            14 March 2026
+          </div>
+          <div class="text-teal-400 text-xs font-medium">SGD 35 / student</div>
+        </div>
+
+        <!-- Bangkok -->
+        <div class="bg-teal-800/30 backdrop-blur-sm rounded-2xl p-6 border border-teal-700/30 hover:border-gold-400/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-2xl">🇹🇭</span>
+            <div>
+              <h3 class="text-white font-bold">Bangkok Senior</h3>
+              <p class="text-teal-300 text-xs">Bangkok Patana School</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 text-teal-200 text-sm mb-2">
+            <svg class="w-4 h-4 text-gold-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            5 March 2026
+          </div>
+          <div class="text-teal-400 text-xs font-medium">7,500 Baht / team</div>
+        </div>
+
+        <!-- Vietnam -->
+        <div class="bg-teal-800/30 backdrop-blur-sm rounded-2xl p-6 border border-teal-700/30 hover:border-gold-400/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-2xl">🇻🇳</span>
+            <div>
+              <h3 class="text-white font-bold">Vietnam Senior</h3>
+              <p class="text-teal-300 text-xs">BIS Ho Chi Minh City</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 text-teal-200 text-sm mb-2">
+            <svg class="w-4 h-4 text-gold-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            7 March 2026
+          </div>
+          <div class="text-teal-400 text-xs font-medium">VND 1,500,000 / student</div>
+        </div>
+
+        <!-- Manila -->
+        <div class="bg-teal-800/30 backdrop-blur-sm rounded-2xl p-6 border border-teal-700/30 hover:border-gold-400/30 transition-all duration-300">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-2xl">🇵🇭</span>
+            <div>
+              <h3 class="text-white font-bold">Manila Senior</h3>
+              <p class="text-teal-300 text-xs">Brent International School</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 text-teal-200 text-sm mb-2">
+            <svg class="w-4 h-4 text-gold-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            7 March 2026
+          </div>
+          <div class="text-teal-400 text-xs font-medium">USD 360 / school</div>
+        </div>
+
+        <!-- CTA card -->
+        <div class="bg-gradient-to-br from-gold-400/10 to-gold-400/5 rounded-2xl p-6 border border-gold-400/20 flex flex-col items-center justify-center text-center">
+          <div class="w-14 h-14 rounded-full bg-gold-400/20 flex items-center justify-center mb-4">
+            <svg class="w-7 h-7 text-gold-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+          </div>
+          <h3 class="text-white font-bold mb-2">Want to Host?</h3>
+          <p class="text-teal-300 text-sm mb-4">Bring a WMC Regional to your school or city.</p>
+          <a href="pages/contact.html" class="px-5 py-2 bg-gold-400 hover:bg-gold-300 text-teal-950 font-semibold text-sm rounded-lg transition">Get in Touch</a>
+        </div>
+      </div>
+
+      <div class="text-center mt-10 reveal-on-scroll">
+        <a href="pages/regionals.html" class="text-gold-400 hover:text-gold-300 font-semibold transition inline-flex items-center gap-2">
+          View All Regionals
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave -->
+  <div class="wave-divider bg-gradient-to-br from-teal-950 to-teal-950">
+    <svg viewBox="0 0 1440 64" preserveAspectRatio="none" fill="#f9fafb"><path d="M0,32 C360,64 720,0 1080,32 C1260,48 1380,56 1440,56 L1440,64 L0,64 Z"/></svg>
+  </div>
+
+  <!-- ============================================================
+       WORLD FINALS PREVIEW
+       ============================================================ -->
+  <section class="py-20 lg:py-28 bg-gray-50 cross-pattern-bg relative overflow-hidden">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14 reveal-on-scroll">
+        <span class="inline-block px-4 py-1 rounded-full bg-teal-100 text-teal-700 text-xs font-semibold uppercase tracking-widest mb-4">World Finals 2026</span>
+        <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight">Two World-Class Venues</h2>
+        <p class="mt-4 text-gray-500 text-lg">Earn a Golden Ticket at your regional to compete with the best in the world.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 reveal-on-scroll">
+        <!-- Senior Finals -->
+        <div class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300">
+          <div class="h-48 bg-gradient-to-br from-teal-700 to-teal-900 flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M20%2018v4M18%2020h4%22%20stroke%3D%22white%22%20stroke-opacity%3D%220.06%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E')]"></div>
+            <div class="text-center relative z-10">
+              <div class="text-5xl mb-2">🇬🇧</div>
+              <div class="text-white font-extrabold text-xl">Imperial College London</div>
+              <div class="text-teal-200 text-sm mt-1">Senior World Finals</div>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 text-gray-600 text-sm mb-3">
+              <svg class="w-4 h-4 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              29 June – 5 July 2026
+            </div>
+            <p class="text-sm text-gray-600 leading-relaxed">A week of intense competition across 14 rounds at one of the world's top universities. Full boarding, cultural excursions, and the ultimate mathematical challenge.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-xs font-semibold text-teal-600 bg-teal-50 px-3 py-1 rounded-full">GBP 3,000</span>
+              <a href="pages/finals.html" class="text-sm text-teal-600 hover:text-teal-700 font-semibold transition">Learn More →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Junior Finals -->
+        <div class="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-100 transition-all duration-300">
+          <div class="h-48 bg-gradient-to-br from-emerald-600 to-emerald-800 flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M20%2018v4M18%2020h4%22%20stroke%3D%22white%22%20stroke-opacity%3D%220.06%22%20stroke-width%3D%221%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E')]"></div>
+            <div class="text-center relative z-10">
+              <div class="text-5xl mb-2">🇦🇺</div>
+              <div class="text-white font-extrabold text-xl">University of Melbourne</div>
+              <div class="text-emerald-200 text-sm mt-1">Junior World Finals</div>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 text-gray-600 text-sm mb-3">
+              <svg class="w-4 h-4 text-emerald-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              16 – 22 December 2026
+            </div>
+            <p class="text-sm text-gray-600 leading-relaxed">The southern hemisphere's premier math event. Junior competitors from around the globe come together for a week of world-class challenges in Melbourne.</p>
+            <div class="mt-4 flex items-center justify-between">
+              <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full">SGD 3,000</span>
+              <a href="pages/finals.html" class="text-sm text-emerald-600 hover:text-emerald-700 font-semibold transition">Learn More →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROMO VIDEOS
+       ============================================================ -->
+  <section class="py-20 lg:py-28 bg-white gradient-mesh-bg relative overflow-hidden">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14 reveal-on-scroll">
+        <span class="inline-block px-4 py-1 rounded-full bg-teal-100 text-teal-700 text-xs font-semibold uppercase tracking-widest mb-4">See It in Action</span>
+        <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight">The WMC Experience</h2>
+        <p class="mt-4 text-gray-500 text-lg">Watch highlights from past championships and get a feel for what makes WMC special.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal-on-scroll">
+        <div class="rounded-2xl overflow-hidden shadow-lg ring-1 ring-gray-200 aspect-video">
+          <iframe class="w-full h-full" src="https://www.youtube.com/embed/-M72iO3LYuA?rel=0" title="WMC Highlights" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg ring-1 ring-gray-200 aspect-video">
+          <iframe class="w-full h-full" src="https://www.youtube.com/embed/pDQFOiLx3C8?rel=0" title="WMC Experience" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg ring-1 ring-gray-200 aspect-video sm:col-span-2 lg:col-span-1">
+          <iframe class="w-full h-full" src="https://www.youtube.com/embed/Z4qGgXdx5T0?rel=0" title="WMC Competition" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TESTIMONIAL / CTA
+       ============================================================ -->
+  <section class="py-20 lg:py-28 bg-gradient-to-br from-teal-950 via-teal-900 to-teal-950 relative overflow-hidden">
+    <div class="absolute inset-0 hero-glow"></div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="reveal-on-scroll">
+        <svg class="w-10 h-10 text-gold-400/40 mx-auto mb-6" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+        <blockquote class="text-xl lg:text-2xl text-white font-medium leading-relaxed italic">
+          "Maths is a gift to be developed and shared with others. Through competition we gain confidence, and through collaboration, we achieve the extraordinary."
+        </blockquote>
+        <div class="mt-6 text-teal-300 text-sm font-medium">— The WMC Philosophy</div>
+      </div>
+
+      <div class="mt-14 reveal-on-scroll">
+        <h3 class="text-2xl lg:text-3xl font-extrabold text-white mb-4">Ready to Compete?</h3>
+        <p class="text-teal-200/70 mb-8 max-w-xl mx-auto">Join thousands of students from around the world. Whether you're a school looking to participate or a student eager to compete — start your WMC journey today.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="pages/regionals.html" class="px-8 py-3.5 bg-gold-400 hover:bg-gold-300 text-teal-950 font-bold rounded-xl shadow-lg shadow-gold-400/20 hover:shadow-gold-400/40 transition-all duration-300">
+            Register for a Regional
+          </a>
+          <a href="pages/contact.html" class="px-8 py-3.5 border-2 border-teal-500/40 hover:border-gold-400/60 text-white font-semibold rounded-xl hover:bg-teal-800/30 transition-all duration-300">
+            Partner With Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="bg-teal-950 border-t border-teal-800/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div class="grid md:grid-cols-4 gap-10">
+        <!-- Brand -->
+        <div class="md:col-span-1">
+          <a href="index.html" class="flex items-center gap-3 mb-4">
+            <img src="https://eunoia.ventures/gallery/web_assets/wmc.jpg" alt="WMC" class="h-9 w-9 rounded-lg" />
+            <span class="text-white font-bold text-lg">WMC</span>
+          </a>
+          <p class="text-teal-400 text-sm leading-relaxed">World Mathematics Championships® — inspiring young mathematicians for over 25 years.</p>
+          <div class="flex gap-3 mt-5">
+            <a href="https://web.facebook.com/wmc.app" target="_blank" class="w-9 h-9 rounded-lg bg-teal-800/50 hover:bg-teal-700/50 flex items-center justify-center text-teal-300 hover:text-white transition" aria-label="Facebook">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://instagram.com/wmc.app" target="_blank" class="w-9 h-9 rounded-lg bg-teal-800/50 hover:bg-teal-700/50 flex items-center justify-center text-teal-300 hover:text-white transition" aria-label="Instagram">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Competition -->
+        <div>
+          <h4 class="text-white font-semibold text-sm mb-4 uppercase tracking-wider">Competition</h4>
+          <ul class="space-y-2.5">
+            <li><a href="pages/experience.html" class="text-teal-400 hover:text-white text-sm transition">The Experience</a></li>
+            <li><a href="pages/rounds.html" class="text-teal-400 hover:text-white text-sm transition">Round Types</a></li>
+            <li><a href="pages/regionals.html" class="text-teal-400 hover:text-white text-sm transition">Regional Qualifiers</a></li>
+            <li><a href="pages/finals.html" class="text-teal-400 hover:text-white text-sm transition">World Finals</a></li>
+          </ul>
+        </div>
+
+        <!-- Community -->
+        <div>
+          <h4 class="text-white font-semibold text-sm mb-4 uppercase tracking-wider">Community</h4>
+          <ul class="space-y-2.5">
+            <li><a href="pages/partners.html" class="text-teal-400 hover:text-white text-sm transition">Host Partners</a></li>
+            <li><a href="pages/contact.html" class="text-teal-400 hover:text-white text-sm transition">Contact Us</a></li>
+            <li><a href="https://competition.academy/login" target="_blank" class="text-teal-400 hover:text-white text-sm transition">Student Login</a></li>
+          </ul>
+        </div>
+
+        <!-- Hub / Legal -->
+        <div>
+          <h4 class="text-white font-semibold text-sm mb-4 uppercase tracking-wider">Portfolio</h4>
+          <ul class="space-y-2.5">
+            <li><a href="../../index.html" class="text-teal-400 hover:text-white text-sm transition">⬅ Back to Hub</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-teal-800/50 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-teal-500 text-xs">© 2016–2026 Eunoia Ventures. World Mathematics Championships® is a registered trademark.</p>
+        <p class="text-teal-600 text-xs">Redesign by <span class="text-teal-400">CMath ProClub</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

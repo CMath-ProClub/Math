@@ -45,6 +45,47 @@
         "featured": true,
         "shortDescription": "Complete 7-page redesign for the largest K-12 math competition in North America (1M+ annual participants)."
       }
+    },
+
+    {
+      "slug": "wmc-redesign",
+      "name": "World Mathematics Championships® — Full Redesign",
+      "sourceUrl": "https://wmc.eunoia.ventures",
+      "status": "complete",
+      "created": "2026-02-18",
+      "updated": "2026-02-18",
+
+      "tags": ["International", "Competition", "Residential", "SEAMC", "NEAMC", "Big"],
+      "complexity": "high",
+
+      "organization": {
+        "name": "Eunoia Ventures",
+        "type": "for-profit",
+        "isNonprofit": false,
+        "website": "https://eunoia.ventures"
+      },
+
+      "audience": {
+        "reach": "100+ partner schools across 6 continents",
+        "primaryRegions": ["Asia-Pacific", "Europe", "Americas", "Africa"],
+        "hasInternationalPresence": true
+      },
+
+      "scope": {
+        "pageCount": 7,
+        "hasShop": false,
+        "hasRegistration": true,
+        "hasCMS": false,
+        "hasAuth": true
+      },
+
+      "tech": ["HTML5", "Tailwind CSS (CDN)", "Vanilla JavaScript"],
+
+      "portfolio": {
+        "visible": true,
+        "featured": true,
+        "shortDescription": "Complete 7-page redesign for the World Mathematics Championships® — 25+ years inspiring young mathematicians across 6 continents with 14+ unique round types."
+      }
     }
   ]
 }
