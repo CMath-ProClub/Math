@@ -32,6 +32,7 @@
 17. [Git Workflow](#17-git-workflow)
 18. [Completed Sites Reference](#18-completed-sites-reference)
 19. [Common Pitfalls](#19-common-pitfalls)
+20. [Targets CSV Maintenance](#20-targets-csv-maintenance-targetscsv)
 
 ---
 
@@ -794,6 +795,52 @@ git push origin main
 | Not scraping the source thoroughly | ❌ Missing content = incomplete redesign. Scrape EVERYTHING first. |
 | Hard-coding dates without checking | ❌ Verify all dates, prices, and details from the source. |
 | Images without lazy loading | ❌ Add `loading="lazy"` to all images and iframes below the fold. |
+
+---
+
+## 20. Targets CSV Maintenance (`targets.csv`)
+
+A master CSV file at the repo root lists **every** math competition and summer program we aim to redesign. Agents **must** update this file whenever they complete or revisit a site.
+
+### CSV Columns
+
+| Column | Description |
+|--------|-------------|
+| `Section` | `Competition` or `Summer Program` |
+| `Name` | Human-readable name of the organization / event |
+| `Website URL` | Official website (the source being redesigned) |
+| `Contact Info` | Email or phone from the source site (if found) |
+| `Revamp Status` | One of: **F** / **M** / **P** / **N** (see below) |
+
+### Revamp Status Codes
+
+| Code | Meaning | When to use |
+|------|---------|-------------|
+| **F** | **Full** | Redesign is 100% complete — all pages, all content, manifest entry, committed & pushed. |
+| **M** | **Mostly** | Redesign covers ≥75% of source content but is missing minor pages or polish. |
+| **P** | **Partial** | Some pages exist but the redesign is clearly incomplete. |
+| **N** | **None** | No redesign has been started (or a previous attempt was deleted). |
+| *(blank)* | **Unknown** | Row has not been evaluated yet. |
+
+### Update Rules
+
+1. **After completing a redesign:** Set the row's status to `F` (or `M`/`P` if incomplete).
+2. **After auditing an earlier site:** If quality has degraded or new source content has appeared, downgrade the status (e.g., `F` → `M`).
+3. **When adding a new target:** Append the row in alphabetical order within its section. Leave status blank.
+4. **Keep sorted:** Competitions first (A–Z), then Summer Programs (A–Z).
+5. **Deduplicate:** If the same organization appears under two names, keep one canonical row. Use the most specific name.
+6. **Fill in blanks:** If you visit a source site and find contact info that was previously missing, add it.
+
+### Example Workflow
+
+```
+1. Receive task: "Redesign https://www.mathkangaroo.org/"
+2. Build the site per Sections 3–17.
+3. Open targets.csv, find the "Math Kangaroo" row.
+4. Set Revamp Status to F (or M/P).
+5. If contact info is blank, fill it in from the source site.
+6. Commit targets.csv alongside the site files.
+```
 
 ---
 
