@@ -80,7 +80,7 @@ Math/
 3. **Determine the native language** — If NOT English, you will build the site in the native language first with an English toggle (see [Section 14](#14-multi-language-sites-i18n)).
 4. **Map the site architecture** — List every page that should exist. Aim for 5–8 pages typically.
 5. **Find media assets** — YouTube video IDs, image URLs, social media links, logos.
-6. **Choose a unique color palette** — Must NOT duplicate any existing site's palette (see [Section 6](#6-color-system--theming)).
+6. **Extract the brand colors** — Identify the source site's primary colors from its logo, nav, buttons, and headings. Derive your palette from these colors so the redesign still feels like the original organization (see [Section 6](#6-color-system--theming)).
 
 ### Phase 2: Create Files
 
@@ -146,17 +146,26 @@ sites/[slug]/
 
 ## 6. Color System & Theming
 
-Every site MUST have a unique color palette that distinguishes it visually. Gold accent colors are shared across all sites.
+Every site's color palette should be **derived from the original website's existing branding**. The goal is a premium redesign that still *feels* like the original organization — not a random new color scheme.
 
-### Existing palettes (DO NOT REUSE):
+### How to derive the palette:
 
-| Site | Primary Colors | Used Shades |
-|------|---------------|-------------|
-| **Math League** | Navy blue | 900:`#0C1D3A`, 800:`#132B50`, 700:`#1E3A5F`, 600:`#2B4C7E`, 500:`#3A6298` |
-| **WMC** | Teal/emerald | 950:`#041F1A`, 900:`#0A3830`, 800:`#0D5247`, 700:`#0F6B5E`, 600:`#149177`, 500:`#17A689` |
-| **Hub** | Navy (same as Math League) | Shared palette |
+1. **Visit the source website** and identify its primary brand color(s) — look at the logo, nav bar, buttons, headings, and any brand guidelines.
+2. **Extract the dominant hue family** (e.g., if their logo is red and their nav is dark red → your palette is crimson/red).
+3. **Generate 5–6 shades** in that hue family (darkest for backgrounds → lightest for accents), keeping the feel of the original but polishing it to a premium standard.
+4. **If the original site has no clear branding or uses generic gray**, pick a color that fits the organization's identity (e.g., a Japanese math olympiad might use a deep indigo inspired by traditional Japanese aesthetics).
+5. **If the derived palette collides with an existing site's palette**, shift the hue slightly (e.g., if they're also navy, go slate-blue or indigo instead) to keep each site visually distinct.
+6. **Gold remains the universal accent / CTA color** across all sites — do not replace gold with the source site's accent color.
 
-### Shared accent (used by ALL sites):
+### Existing palettes (avoid duplicating these exact hues):
+
+| Site | Primary Colors | Derived From | Used Shades |
+|------|---------------|--------------|-------------|
+| **Math League** | Navy blue | mathleague.com's blue branding | 900:`#0C1D3A`, 800:`#132B50`, 700:`#1E3A5F`, 600:`#2B4C7E`, 500:`#3A6298` |
+| **WMC** | Teal/emerald | wmc.eunoia.ventures's green/teal branding | 950:`#041F1A`, 900:`#0A3830`, 800:`#0D5247`, 700:`#0F6B5E`, 600:`#149177`, 500:`#17A689` |
+| **Hub** | Navy (same as Math League) | N/A — portfolio hub | Shared palette |
+
+### Shared accent (used by ALL sites — never change):
 
 ```
 gold-500: #D4A017
@@ -164,13 +173,15 @@ gold-400: #E8B931
 gold-300: #F0CC5B
 ```
 
-### How to pick a new palette:
+### Palette creation steps:
 
-1. Choose a primary hue family NOT already used (e.g., indigo, crimson, slate-blue, forest-green, burgundy, etc.)
-2. Generate 5–6 shades (darkest for backgrounds → lightest for accents)
-3. The darkest shade is for the nav bar and hero backgrounds
-4. Keep gold as the universal accent / CTA color
-5. Define it in `tailwind.config.js`:
+1. Identify the source site's primary brand color hex code(s)
+2. Use that hue to generate 5–6 shades (darkest → lightest)
+3. The darkest shade (950/900) is for the nav bar and hero backgrounds
+4. Mid shades (700–600) are for borders, hover states, and text accents
+5. Lightest shade (500) is for subtle text highlights
+6. Keep gold as the universal accent / CTA color
+7. Define it in `tailwind.config.js`:
 
 ```javascript
 tailwind.config = {
