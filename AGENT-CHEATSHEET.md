@@ -33,6 +33,7 @@
 18. [Completed Sites Reference](#18-completed-sites-reference)
 19. [Common Pitfalls](#19-common-pitfalls)
 20. [Targets CSV Maintenance](#20-targets-csv-maintenance-targetscsv)
+21. [Image Sourcing — Authentic Photos](#21-image-sourcing--authentic-photos)
 
 ---
 
@@ -872,6 +873,80 @@ A master CSV file at the repo root lists **every** math competition and summer p
 5. If contact info is blank, fill it in from the source site.
 6. Commit targets.csv alongside the site files.
 ```
+
+---
+
+## 21. Image Sourcing — Authentic Photos
+
+Never use generic Unsplash/stock images for competition redesigns. Follow this priority order:
+
+### Priority 1: Organization's Own Photo Galleries
+
+Most math-league sites host actual tournament photos in their news or results pages — these are NOT hotlink-blocked. Look for news/tournament-recap URLs like `/index.php/38-news/NNN-tournament-name`.
+
+**Math League International Summer Tournament — confirmed working URL patterns:**
+```
+https://mathleague.com/images/2018/middle/{FILENAME}.jpg
+https://mathleague.com/images/competitions/2019/elementary/day1and2/{FILENAME}.jpg
+https://mathleague.com/images/competitions/2019/elementary/day3/{FILENAME}.jpg
+https://mathleague.com/images/competitions/2019/elementary/day4/{FILENAME}.jpg
+```
+
+Known working filenames (from tournament news pages):
+| File | Subject |
+|------|---------|
+| `2018/middle/20180723_190751.jpg` | 2018 Middle School tournament opening |
+| `2018/middle/20180724_193913.jpg` | Tournament competition in action |
+| `2018/middle/20180725_085348.jpg` | TCNJ campus tournament |
+| `2018/middle/20180726_162525.jpg` | Competition session |
+| `2018/middle/20180726_162614.jpg` | Competition session |
+| `competitions/2019/elementary/day1and2/20190714_101118.jpg` | 2019 Elementary School Tournament |
+| `competitions/2019/elementary/day1and2/20190714_101351.jpg` | Students competing on-site |
+| `competitions/2019/elementary/day3/20190715_093413.jpg` | Day 3 competition |
+| `competitions/2019/elementary/day3/20190715_160211.jpg` | Day 3 afternoon session |
+| `competitions/2019/elementary/day4/20190716_095734.jpg` | Day 4 competition |
+| `competitions/2019/elementary/day4/20190716_104833.jpg` | Award ceremony area |
+
+> ⚠️ Note: The mathleague.com CDN/sidebar images (loaded via widget scripts) ARE hotlink-blocked. The `/images/YEAR/TYPE/` paths from news pages are NOT.
+
+### Priority 2: Wikimedia Commons (CC-licensed)
+
+Search `commons.wikimedia.org` for freely licensed math competition photos.
+
+| Photo | URL | License | Credit |
+|-------|-----|---------|--------|
+| IMO 2015 Closing Ceremony, Chiang Mai | `https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/IMO_2015_closing_ceremony.jpg/800px-IMO_2015_closing_ceremony.jpg` | CC BY-SA 4.0 | Z3144228 via Wikimedia |
+
+Attribution format: `"Photo: Z3144228, CC BY-SA 4.0, via Wikimedia Commons"`
+
+Search tips:
+- Query: `"math olympiad" OR "math competition" site:commons.wikimedia.org`
+- Filter by license: CC BY, CC BY-SA (safe for any use with attribution)
+- Avoid: CC BY-NC (non-commercial only — GitHub Pages is fine but be cautious), No Known License
+
+### Priority 3: TCNJ Venue Photos (for Math League only)
+
+TCNJ (The College of New Jersey) is the permanent host venue for Math League summer tournaments. Freely licensed venue photos are on Wikimedia Commons — use these when showing the competition location.
+
+### Founder / Person Photos
+
+**Steven R. Conrad and Daniel Flegler (Math League co-founders) have NO publicly available portrait photos anywhere.** Exhaustive search across: mathleague.com, Wikipedia, Flickr, Facebook, Wayback Machine, legacy.com, northjersey.com — all returned nothing.
+
+**Correct permanent solution: monogram avatar card** in the about page:
+```html
+<!-- Gold circle with initials for Conrad -->
+<div class="w-20 h-20 bg-gold-500 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg border-4 border-gold-400/30">
+  <span class="text-xl font-black text-navy-900 tracking-tight">SRC</span>
+</div>
+
+<!-- White/15 circle with initials for Flegler -->
+<div class="w-20 h-20 bg-white/15 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg border-4 border-white/20">
+  <span class="text-xl font-black text-white tracking-tight">DF</span>
+</div>
+```
+Card header uses `bg-gradient-to-br from-navy-900 to-navy-800` (Conrad) and `from-navy-800 to-navy-700` (Flegler).
+
+Do NOT waste time searching again — this is a known dead end.
 
 ---
 
