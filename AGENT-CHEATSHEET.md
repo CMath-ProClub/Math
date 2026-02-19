@@ -598,7 +598,7 @@ const translations = {
     'hero.subtitle': 'English subtitle here.',
     // ... ALL translatable strings
     'footer.copyright': '© 2026 Organization Name',
-    'footer.credit': 'Redesign by CMath ProClub',
+    'footer.credit': 'Redesign by Carter Matherne & Logan LaNou',
   },
   // Native language is the DEFAULT (already in the HTML)
 };
@@ -716,6 +716,36 @@ The bar is set by the Math League and WMC redesigns. Every new site must match t
 - [ ] YouTube embeds use `loading="lazy"` and `rel=0`
 - [ ] Proper semantic HTML (sections, headings, labels)
 - [ ] Accessible (aria-labels on icon buttons, alt text on images)
+- [ ] Venue/location/city cards use real photography — never flag emojis, initials, or flat gradient placeholders
+
+### Image & Visual Richness (Preferred over Placeholders):
+
+Whenever a section represents a **real-world place** (city, university, venue, country) prefer an actual photograph over any of the following anti-patterns:
+
+| ❌ Anti-pattern | ✅ Preferred replacement |
+|-----------------|-------------------------|
+| Flag emoji (🇬🇧 🇦🇺) as the card "image" | City skyline or venue photo from Unsplash |
+| Flat color gradient with initials (`ICL`, `UOM`) | `<img>` with dark overlay gradient + text at bottom |
+| `math-bg-symbols` div as card hero | Real photo + `bg-gradient-to-t from-[color]-950/90` overlay |
+| Generic stock icons for locations | Architecture / landmark photography |
+
+**Implementation pattern** (used in WMC finals.html — copy this for any venue card):
+```html
+<div class="h-56 relative overflow-hidden">
+  <img src="https://images.unsplash.com/photo-[ID]?auto=format&fit=crop&w=800&q=80"
+       alt="[City] skyline"
+       class="w-full h-full object-cover scale-105 hover:scale-100 transition-transform duration-700"
+       loading="lazy" />
+  <div class="absolute inset-0 bg-gradient-to-t from-[primary]-950/90 via-[primary]-900/50 to-black/10"></div>
+  <div class="absolute bottom-0 left-0 right-0 p-6">
+    <h3 class="text-white font-extrabold text-2xl drop-shadow-lg">[Venue Name]</h3>
+    <p class="text-[primary]-200 text-sm mt-1 drop-shadow">[Division / Subtitle]</p>
+  </div>
+</div>
+```
+
+**Recommended Unsplash search terms:** `[city name] skyline`, `[city name] cityscape`, `[university name] campus`, `[landmark] architecture`  
+**Always use** `?auto=format&fit=crop&w=800&q=80` query params for performance.
 
 ### Section rhythm (typical page):
 1. **Hero** (dark gradient + glow) → wave divider
@@ -795,6 +825,7 @@ git push origin main
 | Not scraping the source thoroughly | ❌ Missing content = incomplete redesign. Scrape EVERYTHING first. |
 | Hard-coding dates without checking | ❌ Verify all dates, prices, and details from the source. |
 | Images without lazy loading | ❌ Add `loading="lazy"` to all images and iframes below the fold. |
+| Flag emojis / initials as venue cards | ❌ Use real city/venue photography. See Section 16 Image & Visual Richness. |
 
 ---
 
