@@ -100,6 +100,150 @@
   animation: pulse-dot 2s ease-in-out infinite;
 }
 
+/* ===== Additional Background Patterns ===== */
+
+/* Diagonal lines — subtle 45° stripe pattern */
+.diagonal-lines-bg {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 35px,
+    rgba(8,15,31,0.015) 35px,
+    rgba(8,15,31,0.015) 36px
+  );
+}
+
+/* Cross / plus pattern — tiny plus signs */
+.cross-pattern-bg {
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 18v4M18 20h4' stroke='%23080F1F' stroke-opacity='0.04' stroke-width='1' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+/* Geometric grid — subtle hexagonal-ish tiling */
+.geo-grid-bg {
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L55 20 L55 40 L30 55 L5 40 L5 20 Z' fill='none' stroke='%23080F1F' stroke-opacity='0.025' stroke-width='0.5'/%3E%3C/svg%3E");
+}
+
+/* Gradient mesh — soft blurry blobs */
+.gradient-mesh-bg {
+  position: relative;
+}
+.gradient-mesh-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 600px 400px at 10% 20%, rgba(212,160,23,0.03) 0%, transparent 70%),
+    radial-gradient(ellipse 500px 500px at 90% 80%, rgba(58,98,152,0.03) 0%, transparent 70%),
+    radial-gradient(ellipse 400px 300px at 50% 50%, rgba(139,92,246,0.02) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Large watermark math symbols — oversized decorative background text */
+.math-watermark {
+  position: relative;
+  overflow: hidden;
+}
+.math-watermark::before {
+  content: "∫";
+  position: absolute;
+  font-size: 20rem;
+  font-weight: 800;
+  color: rgba(8,15,31,0.015);
+  top: -2rem;
+  right: -3rem;
+  pointer-events: none;
+  z-index: 0;
+  line-height: 1;
+}
+.math-watermark-pi::before { content: "π"; }
+.math-watermark-sigma::before { content: "Σ"; }
+.math-watermark-delta::before { content: "Δ"; }
+.math-watermark-sqrt::before { content: "√"; }
+.math-watermark-theta::before { content: "θ"; }
+.math-watermark-phi::before { content: "φ"; }
+.math-watermark-omega::before { content: "Ω"; }
+.math-watermark-infinity::before { content: "∞"; }
+.math-watermark-left::before { right: auto; left: -3rem; }
+
+/* SVG wave section divider — place inside a div between sections */
+.wave-divider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.wave-divider svg {
+  display: block;
+  width: 100%;
+  height: 48px;
+}
+@media (min-width: 768px) {
+  .wave-divider svg { height: 64px; }
+}
+.wave-divider-flip svg {
+  transform: scaleY(-1);
+}
+
+/* Corner accent — decorative L-shaped corner borders */
+.corner-accents {
+  position: relative;
+}
+.corner-accents::before,
+.corner-accents::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+.corner-accents::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid rgba(212,160,23,0.15);
+  border-left: 2px solid rgba(212,160,23,0.15);
+  border-top-left-radius: 12px;
+}
+.corner-accents::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid rgba(58,98,152,0.15);
+  border-right: 2px solid rgba(58,98,152,0.15);
+  border-bottom-right-radius: 12px;
+}
+
+/* Animated floating particles — very subtle */
+.floating-particles {
+  position: relative;
+  overflow: hidden;
+}
+.floating-particles::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle 2px at 15% 25%, rgba(212,160,23,0.08) 0%, transparent 100%),
+    radial-gradient(circle 2px at 85% 15%, rgba(58,98,152,0.06) 0%, transparent 100%),
+    radial-gradient(circle 1.5px at 45% 75%, rgba(212,160,23,0.06) 0%, transparent 100%),
+    radial-gradient(circle 2px at 70% 60%, rgba(58,98,152,0.05) 0%, transparent 100%),
+    radial-gradient(circle 1.5px at 25% 90%, rgba(139,92,246,0.04) 0%, transparent 100%),
+    radial-gradient(circle 2px at 90% 45%, rgba(212,160,23,0.05) 0%, transparent 100%);
+  animation: particle-drift 30s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes particle-drift {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(3%, -2%); }
+  50%  { transform: translate(-2%, 3%); }
+  75%  { transform: translate(1%, -1%); }
+  100% { transform: translate(0, 0); }
+}
+
 /* Scrollbar hide utility */
 .scrollbar-hide {
   -ms-overflow-style: none;
